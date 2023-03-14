@@ -1,6 +1,12 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+A busca por uma alimentação saudável é essencial, pois ela fornece todos os nutrientes fundamentais para o bom funcionamento do nosso corpo e traz benefícios a todas as idades. 
+
+Programas de televisão, internet e influenciadores digitais fitness servem como fonte de incentivo. A preocupação com a saúde também é um ponto fundamental nessa busca de melhoria na alimentação.  
+
+Uma boa escolha é sempre optar por alimentos mais naturais e saudáveis, evitar o consumo de alimentos industrializados e ultraprocessados e procurar preparar sua própria refeição rica em ingredientes bons para o corpo. 
+
+Segundo a NutriConnection em seu Relatório de Tendências, foi abordado o tema “alimentação saudável, o que podemos esperar do futuro”, a organização acredita que as empresas de alimentos precisam modernizar seus produtos para se manterem relevantes no mercado e oferecer produtos mais saudáveis e nutritivos, assim como, buscar novas tecnologias de processamento para garantir que os alimentos estejam frescos e seguros.  
 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
@@ -34,8 +40,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+No geral, os aplicativos de cozinha apresentam opções de receitas variadas e não se preocupam tanto com questões nutricionais, com isso nosso público se concentra em pessoas físicas que buscam balancear sua refeição com receitas fitness e ingredientes saudáveis
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
