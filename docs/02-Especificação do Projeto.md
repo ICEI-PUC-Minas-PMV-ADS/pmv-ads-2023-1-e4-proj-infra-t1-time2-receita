@@ -94,7 +94,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais d
 |RF-06 | Permitir ao usuário atualizar as receitas cadastradas  | MUST | 
 |RF-07 | Permitir ao usuário excluir receitas   | MUST |
 |RF-08 | Permitir pesquisar receitas. | SHOULD | 
-|RF-09 | Salvar lista de favoritos.   | WON'T |
+|RF-09 | Salvar lista de favoritos.   | COULD |
 
 ### Requisitos não Funcionais
 
@@ -106,7 +106,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais d
 |RNF-04 | A aplicação deve ser intuitiva, de fácil utilização, entendimento e deve ser organizado de tal maneira que os erros dos usuários sejam minimizados.     |  COULD |
 |RNF-05 | A aplicação deve possuir uma interface limpa, com visualização voltada para as necessidades do usuário no momento, também como forma de melhorar a performance e o desempenho.   |  COULD |
 |RNF-06 | A aplicação ou parte dela deve ser acessível por todo tipo de pessoas: idosos, PCD ou necessidade específica.  |  COULD |
-|RNF-07 |A aplicação deverá ser responsiva.   |  COULD |
+|RNF-07 |A aplicação deverá ser responsiva.   |  SHOULD|
 
 ## Restrições
 
