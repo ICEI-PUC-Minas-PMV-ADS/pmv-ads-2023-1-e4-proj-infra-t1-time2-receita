@@ -1,9 +1,8 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Para a realização de um projeto complexo e com o pouco tempo para a realização, será utilizado o método ágil "SCRUM", pois com esse método, também é possível otimizar o projeto com o passar das etapas, sem ter receio de mudar algo, pois a metodologia permite essas atualizações, além de outros benefícos.
+Usaremos o mesmo ambiente utilizado pelo professor nas videoaulas, e nos organizaremos através da ferramenta de organização de equipes estabelecida pelo próprio github.
 
 ## Relação de Ambientes de Trabalho
 
