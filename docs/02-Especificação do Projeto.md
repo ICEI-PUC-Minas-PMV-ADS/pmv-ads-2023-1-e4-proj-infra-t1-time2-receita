@@ -44,23 +44,18 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Atualmente uma pessoa quando deseja fazer uma receita podemos considerar que a mesma irá recorrer a livros de receitas, acompanhar em programas de culinária, redes sociais e até mesmo comprar ebooks que muitas das vezes são vendidos por professionais da área, tais como: nutricionista, nutrólogo, influencer fitness entre outros. Uma busca na internet também é possível encontrar, mas devido à grande diversidade de receitas existe uma possibilidade do seu foco mudar. 
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+É uma aplicação especializada na culinária fit, com foco somente em opções fitness e saudáveis, criamos esse projeto, onde o objetivo é o próprio usuário inserir suas receitas. Após a criação as mesmas ficarão disponíveis para todos os demais usuários poder visualizar e praticar, devido a possibilidade de inserção, o acervo sempre terá receitas novas para serão feitas. Ter variedades de cardápio em um só lugar para ajudar na dieta, facilitar em definir o que comer em cada refeição e agilizar na sua rotina é o nosso diferencial para te ajudar nessa tarefa de seguir uma boa alimentação. 
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – MODELAGEM AS IS
+O AS-IS é a situação atual dos processos, ou seja, como os processos funcionam hoje. Sem realizar nenhuma análise crítica e sem discutir se o processo está bom ou ruim.
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+### Processo 2 – MODELAGEM TO BE - APLICATIVO MELHOR COMPRA
+O TO-BE é o processo futuro, ou seja, ele é o processo melhorado, aquele processo que queremos que a empresa venha a seguir. Ele é o processo onde as melhorias estão sendo implementadas. 
 
-![Processo 1](img/02-bpmn-proc1.png)
-
-### Processo 2 – NOME DO PROCESSO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Processo 2](img/02-bpmn-proc2.png)
 
 ## Indicadores de Desempenho
 
@@ -95,6 +90,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais d
 |RF-07 | Permitir ao usuário excluir receitas   | MUST |
 |RF-08 | Permitir pesquisar receitas. | SHOULD | 
 |RF-09 | Salvar lista de favoritos.   | COULD |
+|RF-10 | Permitir aos usuarios visualizar todas as receitas da aplicação  |  MUST |
+|RF-11 | Ordenas as receitas por categoria.   | COULD |
 
 ### Requisitos não Funcionais
 
