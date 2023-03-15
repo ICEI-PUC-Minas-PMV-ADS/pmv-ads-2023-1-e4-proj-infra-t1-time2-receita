@@ -9,34 +9,12 @@ Uma boa escolha é sempre optar por alimentos mais naturais e saudáveis, evitar
 Segundo a NutriConnection em seu Relatório de Tendências, foi abordado o tema “alimentação saudável, o que podemos esperar do futuro”, a organização acredita que as empresas de alimentos precisam modernizar seus produtos para se manterem relevantes no mercado e oferecer produtos mais saudáveis e nutritivos, assim como, buscar novas tecnologias de processamento para garantir que os alimentos estejam frescos e seguros.  
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+Geralmente encontramos sites de receitas onde há poucas receitas fitness e saudáveis, e não é possível que alguém que queira compartilhar a sua receita a coloque no site ou no app, esse é um grande problema, já é muito difícil achar um site ou app somente de receitas saudáveis,  e  ainda mais difícil um  que seja possível os próprios usuários se cadastrarem para  inserirem receitas, editar,  deletar, e atualizar elas… como uma rede social de receitas. 
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
-## Justificativa
-
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Proporcionar aos usuários  compartilhar suas receitas fitness e saudáveis com  pessoas que se interessam por essas receitas, e encontram dificuldade em encontrar sites e aplicativos que proporcionam um foco em receitas desse tipo. E claro também com outro objetivo, que é facilitar para  pessoas que estão procurando se alimentar melhor, para fazer refeições mais saudáveis, e através das ideias de  receitas compartilhadas pelos usuários do nosso site/app, a pessoa encontre diversas possibilidades de receitas para fazer com os ingredientes que talvez ela tenha em casa, mas não sabia que era um alimento saudável ou que daria certo, e encontrando a receita, ela possa perceber que seguir uma alimentação saudável não é tão difícil como muitos pensam.
 
 ## Público-Alvo
 
