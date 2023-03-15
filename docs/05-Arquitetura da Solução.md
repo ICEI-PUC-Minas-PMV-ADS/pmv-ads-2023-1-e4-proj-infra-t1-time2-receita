@@ -37,9 +37,10 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Para o desenvolvimento, utilizaremos a mesma tecnologia utilizada pelo professor nas videoaulas, o Visual Studio 2022, para a hospedagem utilizaremos o GitHub.
+Será utilizado  para o desenvolvimento web Back-end  o framework ASP.NET, com a linguagem de programação C#, para o desenvolvimento mobile usaremos o framework React Native do JavaScript.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+Para o desenvolvimento do Front-end utilizaremos o HTML e css, para os diagramas utilizamos o diagrams.net, e para os templates utilizamos os Figma.
 
 ## Hospedagem
 
