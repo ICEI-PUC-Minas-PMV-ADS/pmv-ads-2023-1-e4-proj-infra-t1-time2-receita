@@ -151,7 +151,7 @@ De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar 
 
 Com diagramas bem organizados que permite gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
 
-[Gerenciamento do tempo](docs/img/Timing_Projeto-Eixo4.pdf)
+[Gerenciamento do tempo](Timing_Projeto-Eixo4.pdf)
 
 ![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
 
