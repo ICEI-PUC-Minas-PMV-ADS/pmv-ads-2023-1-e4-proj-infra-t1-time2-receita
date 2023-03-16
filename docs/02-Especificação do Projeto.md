@@ -1,26 +1,120 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+Definição do Problema:
+Encontrar receitas fitness e saudáveis em sites de culinária é um desafio, especialmente quando se trata de uma plataforma que permita aos usuários compartilhar suas próprias receitas. Este projeto visa solucionar esse problema, criando uma rede social de receitas fitness e saudáveis que permita aos usuários cadastrados compartilhar suas próprias receitas, editá-las, excluí-las e atualizá-las.
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Ideia de Solução:
+Desenvolver um site e aplicativo de culinária que se concentre em receitas fitness e saudáveis, permitindo que os usuários compartilhem suas próprias receitas, e que sejam capazes de editá-las, excluí-las, atualizá-las e avaliá-las. O site e o aplicativo serão criados usando o Asp.Net Core MVC e o React Native/Snack Expo, respectivamente. Ferramentas de comunicação, como o Microsoft Teams e o WhatsApp, serão utilizadas para a comunicação da equipe. Ferramentas para criação de diagramas, como o Diagramas.net, e para desenho de tela (wireframe), como o Figma, serão usadas para auxiliar no desenvolvimento do projeto.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+## Ana Souza
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
+| --- | --- | --- |
+| Idade:  30 anos | Instagram | Ajudar seus clientes a alcançarem seus objetivos de forma saudável. |
+| Estado Civil: Casada  | MyFitnessPal | Receber recomendações personalizadas. |
+| Naturalidade: São Paulo, SP  | | |
+| Tipo de moradia atual: Apartamento | | |
+| Cidade em que reside atualmente: São Paulo	 | | |
+| Formação: Educação Física	 | | |
+| Ocupação: Personal Trainer	 | | |
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+| **Frustração:**| **Hobbies:**|
+| --- | --- |
+| Dificuldade em encontrar ingredientes específicos para receitas. | Praticar exercícios físicos e cozinhar.  | - |
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+
+## Pedro Santos
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
+| --- | --- | --- |
+| Idade:  35 anos | Instagram | Experimentar novas receitas e incentivar uma alimentação saudável. |
+| Estado Civil: Solteiro | YouTube | Aprender a preparar novos pratos com ingredientes diferentes |
+| Naturalidade: Rio de Janeiro, RJ | | |
+| Tipo de moradia atual: Casa | | |
+| Cidade em que reside atualmente: Rio de Janeiro | | |
+| Formação: Gastronomia | | |
+| Ocupação: Chef de cozinha | | |
+
+| **Frustração:**| **Hobbies:**|
+| --- | --- |
+| Fornercer pratos mais saudáveis em seu restaurante. | Experimentar novas receitas | - |
+
+
+## Maria Albuquerque
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
+| --- | --- | --- |
+| Idade:  28 anos | Instagram | Ajudar seus pacientes a atingirem seus objetivos de saúde. |
+| Estado Civil: Solteira | Google | Compartilhar suas receitas com seus clientes. |
+| Naturalidade: Belo Horizonte, MG | Keep | |
+| Tipo de moradia atual: Apartamento | | |
+| Cidade em que reside atualmente: Belo Horizonte | | |
+| Formação: Nutrição | | |
+| Ocupação: Nutricionista | | |
+
+| **Frustração:**| **Hobbies:**|
+| --- | --- |
+| Alunos que não se comprometem com a dieta e exercícios. | Ciclismo | - |
+
+
+## João Nunes
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
+| --- | --- | --- |
+| Idade:  25 anos | Stack Overflow | Se manter saudável em meio a uma rotina agitada. |
+| Estado Civil: Solteiro | GitHub | Aprender novas técnicas e receitas de culinária |
+| Naturalidade: Porto Alegre, RS | 9gag | |
+| Tipo de moradia atual: Apartamento | | |
+| Cidade em que reside atualmente: Porto Alegre | | |
+| Formação: Engenharia de Computação | | |
+| Ocupação: Desenvolvedor de software | | |
+
+| **Frustração:**| **Hobbies:**|
+| --- | --- |
+| Falta de tempo para cozinhar e a rotina corrida de trabalho | Programação e desenvolvimento de projetos pessoais. | - |
+
+## Bruno Fonseca
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
+| --- | --- | --- |
+| Idade: 43 anos | Twitter | Conciliar trabalho e alimentação saudável. |
+| Estado Civil: Casado | Instagram | |
+| Naturalidade: Campinas, SP |  | |
+| Tipo de moradia atual: Apartamento | | |
+| Cidade em que reside atualmente: Campinas | | |
+| Formação: Administração	 | | |
+| Ocupação: Empresário | | |
+
+| **Frustração:**| **Hobbies:**|
+| --- | --- |
+| Falta de tempo para preparar refeições saudáveis, ausência de opções práticas e fáceis de fazer. | Música e viagens. | - |
+
+## Mariana Lima
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
+| --- | --- | --- |
+| Idade: 35 anos | Instagram | Manter uma alimentação saudável e equilibrada. |
+| Estado Civil: Casada | TikTok | Encontrar receitas práticas e rápidas de fazer |
+| Naturalidade: São Paulo, SP |  | |
+| Tipo de moradia atual: Casa | | |
+| Cidade em que reside atualmente: São Paulo | | |
+| Formação: Ensino Médio	 | | |
+| Ocupação: Dona de casa | | |
+
+| **Frustração:**| **Hobbies:**|
+| --- | --- |
+| Falta de variedade nas refeições. | Praticar exercícios físicos na academia. | - |
+
+## Lucas Monteiro
+| **Informações Pessoais** | **Sites e Aplicativos** | **Motivações** |
+| --- | --- | --- |
+| Idade: 36 anos | Instagram |  Ter uma alimentação saudável e equilibrada. |
+| Estado Civil: Solteiro | Twitter | Compartilhar suas receitas com amigos e familiares. |
+| Naturalidade: João Pessoa, PB |  | |
+| Tipo de moradia atual: Apartamento | | |
+| Cidade em que reside atualmente: João Pessoa | | |
+| Formação: Direito	 | | |
+| Ocupação: Advogado | | |
+
+| **Frustração:**| **Hobbies:**|
+| --- | --- |
+| Restrições alimentares por conta de sua saúde. | Cozinhar receitas sofisticadas e experimentais. | - |
 
 ## Histórias de Usuários
 
@@ -28,17 +122,15 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+Ana Souza | Quero poder cadastrar minha conta no aplicativo, efetuar login, excluir minha conta e ter a segurança dos meus dados protegidos com criptografia de senhas e outras medidas de segurança | Para ter uma experiência segura e confiável no uso da plataforma. |
+Pedro Santos | Quero poder inserir, atualizar e excluir minhas próprias receitas | Para poder organizar minhas opções e ter um registro delas disponível. |
+Maria Albuquerque | Quero poder pesquisar receitas por nome, categoria ou ingrediente | Para encontrar opções específicas e personalizadas de acordo com minhas preferências. |
+João Nunes | Quero poder salvar minhas receitas favoritas em uma lista de favoritos. | Para poder acessá-las facilmente posteriormente. |
+Mariana Lima | Quero poder avaliar outras receitas. | Para compartilhar minha opinião e ajudar outros usuários na escolha das opções. |
+Lucas Monteiro | Quero ser informado sobre quais campos de preenchimento são obrigatórios. | Para não deixar informações importantes em branco. |
+Bruno Fonseca | Quero uma interface intuitiva e organizada, com símbolos e ícones claros e de fácil entendimento. | Para minimizar erros e facilitar o uso da plataforma. |
+João Nunes | Quero uma interface limpa, que priorize a visualização das informações mais relevantes no momento e que seja responsiva | Para melhorar a performance e o desempenho da aplicação. |
+Maria Albuquerque | Quero uma aplicação acessível para todo tipo de pessoa, incluindo idosos, PCD e pessoas com necessidades específicas. | Para garantir a acessibilidade e inclusão de todos. |
 
 ## Modelagem do Processo de Negócio 
 
@@ -145,28 +237,17 @@ A matriz deve contemplar todos os elementos relevantes que fazem parte do sistem
 
 # Gerenciamento de Projeto
 
-De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
+De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
 
 ## Gerenciamento de Tempo
 
-Com diagramas bem organizados que permite gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
+Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
 
-### Timing visão geral
-![Timing visão geral)](img/timing_00.jpg)
-
-### Timing visão parcial 1 de 3
-![Timing visão parcial 1 de 3)](img/timing_01.jpg)
-
-### Timing visão parcial 2 de 3
-![Timing visão parcial 2 de 3)](img/timing_02.jpg)
-
-### Timing visão parcial 3 de 3
-![Timing visão parcial 3 de 3)](img/timing_03.jpg)
-
+![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![Gráfico de Gantt](img/timing_gant.jpg)
+![Gráfico de Gantt](img/02-grafico-gantt.png)
 
 ## Gerenciamento de Equipe
 
@@ -178,4 +259,4 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento](img/orcamento.jpg)
+![Orçamento](img/02-orcamento.png)
