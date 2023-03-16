@@ -44,7 +44,7 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Atualmente uma pessoa quando deseja fazer uma receita podemos considerar que a mesma irá recorrer a livros de receitas, acompanhar em programas de culinária, redes sociais e até mesmo comprar ebooks que são vendidos por professionais da área, tais como: nutricionista, nutrólogo, influencer fitness entre outros. Com uma busca na internet também é possível encontrar, mas devido à grande diversidade de receitas existe uma possibilidade do seu foco mudar. 
+Atualmente uma pessoa quando deseja fazer uma receita podemos considerar que a mesma irá recorrer a livros de receitas, acompanhar em programas de culinária, redes sociais e até mesmo comprar ebooks que são vendidos por professionais da área, tais como: nutricionista, nutrólogo, influencer fitness entre outros. Com uma busca na internet também é possível encontrar, mas devido à grande diversidade de receitas corre o risco do seu foco desviar para outras receitas gerais. 
 
 ### Descrição Geral da Proposta
 
@@ -52,12 +52,13 @@ Atualmente uma pessoa quando deseja fazer uma receita podemos considerar que a m
 
 ### Processo 1 – MODELAGEM AS IS
 O AS-IS é a situação atual dos processos, ou seja, como os processos funcionam hoje. Sem realizar nenhuma análise crítica e sem discutir se o processo está bom ou ruim.
-
+![Cenario atual](img/receita_atual.JPG)
 
 ### Processo 2 – MODELAGEM TO BE - FREECIPE
 O TO-BE é o processo futuro, ou seja, ele é o processo melhorado, aquele processo que queremos que a empresa venha a seguir. Ele é o processo onde as melhorias estão sendo implementadas. 
 
 ![Cenario futuro](img/receita_futuro.JPG)
+
 ## Indicadores de Desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
