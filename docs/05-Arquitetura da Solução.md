@@ -10,10 +10,9 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 Em programação, um diagrama de classes é uma representação da estrutura e relações das classes que servem de modelo para objetos. Podemos afirmar de maneira mais simples que seria um conjunto de objetos com as mesmas características, assim saberemos identificar objetos e agrupá-los, de forma a encontrar suas respectivas classes. 
 
-![Diagrama de classes receita](https://user-images.githubusercontent.com/127369443/225708693-6f5aedea-cdd0-4f1c-b720-bc433821fed7.png)
+> ![Diagrama de classes receita](https://user-images.githubusercontent.com/127369443/225708693-6f5aedea-cdd0-4f1c-b720-bc433821fed7.png)
 
 
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
 
 ## Modelo ER
 
