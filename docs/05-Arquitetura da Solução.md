@@ -21,7 +21,7 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
 
 Na figura abaixo é mostrado o Esquema Relacional(ER) desenvolvido no próprio banco de dados para o projeto..
 
-> - [Modelo ER](img/modelo_er.png)
+![Modelo ER](img/modelo_er.png)
 
 ## Esquema Relacional
 
