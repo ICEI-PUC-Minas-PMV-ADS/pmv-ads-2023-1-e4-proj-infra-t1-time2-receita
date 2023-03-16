@@ -44,14 +44,7 @@ Para o desenvolvimento do Front-end utilizaremos o HTML e css, para os diagramas
 
 ## Hospedagem
 
-A hospedagem do nosso projeto será no próprio GitHub, através dos comits, é de mais fácil acesso para todos já que é também o mais utilizado.
 
-
-O nosso template é hospedado no Figma, uma ferramenta online para design de interfaces e protótipos, grátis e de fácil acesso.
-
-
-> - [Projeto no GitHub](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita)
-> - [Tamplate no Figma](https://www.figma.com/file/9dKPwWbJdG5FkHIA0GddGk/Receita?node-id=0%3A1&t=dpEC6ePdPdEujV9d-0)
 
 
 ## Qualidade de Software
