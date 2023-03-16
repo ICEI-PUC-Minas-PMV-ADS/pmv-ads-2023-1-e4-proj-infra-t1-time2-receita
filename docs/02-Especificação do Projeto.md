@@ -53,10 +53,11 @@ Atualmente uma pessoa quando deseja fazer uma receita podemos considerar que a m
 ### Processo 1 – MODELAGEM AS IS
 O AS-IS é a situação atual dos processos, ou seja, como os processos funcionam hoje. Sem realizar nenhuma análise crítica e sem discutir se o processo está bom ou ruim.
 
-### Processo 2 – MODELAGEM TO BE - APLICATIVO MELHOR COMPRA
+
+### Processo 2 – MODELAGEM TO BE - FREECIPE
 O TO-BE é o processo futuro, ou seja, ele é o processo melhorado, aquele processo que queremos que a empresa venha a seguir. Ele é o processo onde as melhorias estão sendo implementadas. 
 
-
+![Cenario futuro](img/receita_futuro.JPG)
 ## Indicadores de Desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
@@ -113,10 +114,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais d
 |RE-01| O projeto deverá ser entregue no final do semestre letivo, não podendo extrapolar a data de 25/06/2023.|
 |RE-02| A equipe não pode subcontratar o desenvolvimento do trabalho.      |
 
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
