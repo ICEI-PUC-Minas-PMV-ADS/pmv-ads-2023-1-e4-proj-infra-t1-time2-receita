@@ -9,12 +9,18 @@ Uma boa escolha é sempre optar por alimentos mais naturais e saudáveis, evitar
 Segundo a NutriConnection em seu Relatório de Tendências, foi abordado o tema “alimentação saudável, o que podemos esperar do futuro”, a organização acredita que as empresas de alimentos precisam modernizar seus produtos para se manterem relevantes no mercado e oferecer produtos mais saudáveis e nutritivos, assim como, buscar novas tecnologias de processamento para garantir que os alimentos estejam frescos e seguros.  
 
 ## Problema
-Geralmente encontramos sites de receitas onde há poucas receitas fitness e saudáveis, e não é possível que alguém que queira compartilhar a sua receita a coloque no site ou no app, esse é um grande problema, já é muito difícil achar um site ou app somente de receitas saudáveis,  e  ainda mais difícil um  que seja possível os próprios usuários se cadastrarem para  inserirem receitas, editar,  deletar, e atualizar elas… como uma rede social de receitas. 
+
+Geralmente encontramos sites de receitas onde há poucas receitas fitness e saudáveis, e não é possível que alguém que queira compartilhar a sua receita a coloque no site ou no aplicativo, esse é um grande problema, já é muito difícil encontrar somente com esse foco,  e  ainda mais difícil um  que seja possível os próprios usuários se cadastrarem para  inserirem receitas, editar,  deletar, e atualizar elas, como uma rede social de receitas. 
+
+
+## Justificativa
+
+A justificativa é a inovação de um site e aplicativo de receitas, que pode ser usado mais como uma rede social de receitas fitness, onde você encontra receitas que você pode nunca ter visto em outros lugares, e onde você pode compartilhar as suas, e talvez ninguém nunca tenha visto, uma  que você inventou e ficou boa, e então você resolve compartilhar com as pessoas, principalmente as  que procuram cada dia mais e mais, viver um estilo de vida  mais saudável, e procuram por refeições inovadoras e diferentes para se deliciar, e não ficarem sempre nos mesmos alimentos.
 
 
 ## Objetivos
 
-Proporcionar aos usuários  compartilhar suas receitas fitness e saudáveis com  pessoas que se interessam por essas receitas, e encontram dificuldade em encontrar sites e aplicativos que proporcionam um foco em receitas desse tipo. E claro também com outro objetivo, que é facilitar para  pessoas que estão procurando se alimentar melhor, para fazer refeições mais saudáveis, e através das ideias de  receitas compartilhadas pelos usuários do nosso site/app, a pessoa encontre diversas possibilidades de receitas para fazer com os ingredientes que talvez ela tenha em casa, mas não sabia que era um alimento saudável ou que daria certo, e encontrando a receita, ela possa perceber que seguir uma alimentação saudável não é tão difícil como muitos pensam.
+Proporcionar aos usuários  compartilhar suas receitas fitness e saudáveis com  pessoas que se interessam, e encontram dificuldade em encontrar sites e aplicativos que proporcionam um foco em receitas desse tipo. E claro também com outro objetivo, que é facilitar para  pessoas que estão procurando se alimentar melhor, para fazer refeições mais saudáveis, e através das ideias  compartilhadas pelos usuários, a pessoa encontre diversas possibilidades de pratos para fazer com os ingredientes que talvez ela tenha em casa, mas não sabia que era um alimento saudável ou que daria certo, e assim, ela possa perceber que seguir uma alimentação saudável não é tão difícil como muitos pensam.
 
 ## Público-Alvo
 
