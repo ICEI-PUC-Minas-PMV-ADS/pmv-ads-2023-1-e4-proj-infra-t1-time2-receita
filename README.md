@@ -2,7 +2,7 @@
 
 `Análise e Desenvolvimento de Sistemas`
 
-`Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
+`Projeto: Desenvolvimento de uma Aplicação Distribuída`
 
 `2023.1`
 
