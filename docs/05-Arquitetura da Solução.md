@@ -46,7 +46,7 @@ Para o desenvolvimento do Front-end utilizaremos o HTML e css, para os diagramas
 
 ## Hospedagem
 
-
+A hospedagem do nosso site e aplicativo será no Vercel, e o nosso Back-end será hospedado no banco de dados SQL do azure.
 
 
 ## Qualidade de Software
