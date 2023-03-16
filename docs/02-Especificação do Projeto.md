@@ -44,11 +44,11 @@ Apresente aqui as histórias de usuário que são relevantes para o projeto de s
 
 ### Análise da Situação Atual
 
-Atualmente uma pessoa quando deseja fazer uma receita podemos considerar que a mesma irá recorrer a livros de receitas, acompanhar em programas de culinária, redes sociais e até mesmo comprar ebooks que muitas das vezes são vendidos por professionais da área, tais como: nutricionista, nutrólogo, influencer fitness entre outros. Uma busca na internet também é possível encontrar, mas devido à grande diversidade de receitas existe uma possibilidade do seu foco mudar. 
+Atualmente uma pessoa quando deseja fazer uma receita podemos considerar que a mesma irá recorrer a livros de receitas, acompanhar em programas de culinária, redes sociais e até mesmo comprar ebooks que são vendidos por professionais da área, tais como: nutricionista, nutrólogo, influencer fitness entre outros. Com uma busca na internet também é possível encontrar, mas devido à grande diversidade de receitas existe uma possibilidade do seu foco mudar. 
 
 ### Descrição Geral da Proposta
 
-É uma aplicação especializada na culinária fit, com foco somente em opções fitness e saudáveis, criamos esse projeto, onde o objetivo é o próprio usuário inserir suas receitas. Após a criação as mesmas ficarão disponíveis para todos os demais usuários poder visualizar e praticar, devido a possibilidade de inserção, o acervo sempre terá receitas novas para serão feitas. Ter variedades de cardápio em um só lugar para ajudar na dieta, facilitar em definir o que comer em cada refeição e agilizar na sua rotina é o nosso diferencial para te ajudar nessa tarefa de seguir uma boa alimentação. 
+É uma aplicação especializada na culinária fit, com foco em opções fitness e saudáveis, criamos esse projeto, onde o objetivo é o próprio usuário conseguir inserir suas receitas e também poder visualizar á de outros usuários e pratica-lás. Devido a possibilidade de publicar, o acervo sempre terá receitas novas para serem feitas. Ter variedades de cardápio em um só lugar para ajudar na dieta, facilitar em definir o que comer em cada refeição e agilizar na sua rotina é o nosso diferencial para te ajudar nessa tarefa de seguir uma boa alimentação. 
 
 ### Processo 1 – MODELAGEM AS IS
 O AS-IS é a situação atual dos processos, ou seja, como os processos funcionam hoje. Sem realizar nenhuma análise crítica e sem discutir se o processo está bom ou ruim.
@@ -91,7 +91,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais d
 |RF-08 | Permitir pesquisar receitas. | SHOULD | 
 |RF-09 | Salvar lista de favoritos.   | COULD |
 |RF-10 | Permitir aos usuarios visualizar todas as receitas da aplicação  |  MUST |
-|RF-11 | Ordenas as receitas por categoria.   | COULD |
+|RF-11 | Ordenar as receitas por categoria.   | COULD |
+|RF-12 | Permitir ao usuário avaliar outras receitas.    | COULD |
 
 ### Requisitos não Funcionais
 
@@ -103,7 +104,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais d
 |RNF-04 | A aplicação deve ser intuitiva, de fácil utilização, entendimento e deve ser organizado de tal maneira que os erros dos usuários sejam minimizados.     |  COULD |
 |RNF-05 | A aplicação deve possuir uma interface limpa, com visualização voltada para as necessidades do usuário no momento, também como forma de melhorar a performance e o desempenho.   |  COULD |
 |RNF-06 | A aplicação ou parte dela deve ser acessível por todo tipo de pessoas: idosos, PCD ou necessidade específica.  |  COULD |
-|RNF-07 |A aplicação deverá ser responsiva.   |  SHOULD|
+|RNF-07 | A aplicação deverá ser responsiva.   |  SHOULD|
 
 ## Restrições
 
