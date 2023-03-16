@@ -19,15 +19,15 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
 
-Na figura abaixo é mostrado o Esquema Relacional(ER) desenvolvido no próprio banco de dados para o projeto..
+Na figura abaixo é mostrado o Esquema Relacional(ER).
 
 ![Modelo ER](img/modelo_er.png)
 
 ## Esquema Relacional
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
+
+Na figura abaixo é mostrado o Esquema Relacional(ER).
 
 ![Esquema Relacional](img/modelo_relacional.png)
 
