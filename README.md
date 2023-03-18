@@ -6,7 +6,7 @@
 
 `2023.1`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto em questão é o desenvolvimento de um site e aplicativo de receitas com foco em alimentação saudável e fitness. O objetivo é criar uma espécie de rede social de receitas, onde os usuários possam compartilhar suas receitas saudáveis e também encontrar novas opções de pratos que se adequem às suas necessidades nutricionais. A justificativa para o projeto é a dificuldade de encontrar sites e aplicativos que ofereçam receitas fitness e saudáveis e a falta de opções para os usuários compartilharem suas próprias receitas. O público-alvo são pessoas que buscam se alimentar de forma saudável e equilibrada.
 
 ## Integrantes
 
