@@ -50,12 +50,14 @@ A hospedagem do nosso site e aplicativo será no Vercel, e o nosso Back-end ser�
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+![image](https://user-images.githubusercontent.com/32153247/226087275-85fc5982-90f7-41eb-92f3-a37665b1a26f.png)
+![image](https://user-images.githubusercontent.com/32153247/226087280-9f3ae5b4-ec9c-4f45-b122-346b278ece62.png)
+![image](https://user-images.githubusercontent.com/32153247/226087286-02760a8d-41ee-4660-8781-9444dbf479e7.png)
+![image](https://user-images.githubusercontent.com/32153247/226087290-35ecc29e-2ec0-4a52-bdca-5efd97ba475b.png)
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+Com base nessas características escolhemos algumas para focar no nosso projeto:
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+![image](https://user-images.githubusercontent.com/32153247/194778700-59d4ce4e-55b1-4dc3-a6e4-a28a66a52b9b.png)
 
 > **Links Úteis**:
 >
