@@ -4,6 +4,8 @@
 
 Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
+![Templatepadrao](https://user-images.githubusercontent.com/32153247/226087119-6096917c-9968-4f1f-a1ab-139e9b77eca7.png)
+
 > **Links Úteis**:
 >
 > - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
