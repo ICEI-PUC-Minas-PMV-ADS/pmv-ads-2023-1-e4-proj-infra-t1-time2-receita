@@ -155,7 +155,7 @@ O TO-BE é o processo futuro, ou seja, ele é o processo melhorado, aquele proce
 
 Principais indicadores de desempenho e algumas metas para o processo.
 
-![Indicadores de Desempenho](img/indicadores_de_desempenho.png)
+![Indicadores de Desempenho](img/indicadores_de_desempenho.jpg)
 
 ## Requisitos
 
