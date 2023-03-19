@@ -31,6 +31,7 @@ XXXX XXXXXXXXX
 - Lais Amaral
 - Sabrina Andrade
 - Geovane Vinicius
+- Werlon Oliveira
 
 
 ### Processo
