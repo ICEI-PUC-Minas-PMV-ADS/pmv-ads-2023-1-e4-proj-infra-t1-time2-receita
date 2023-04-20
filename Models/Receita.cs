@@ -31,7 +31,7 @@ namespace backend_freecipes.Models
     {
         [Display(Name = "Facil")]
         Facil,
-        [Display(Name = "Médio")]
+        [Display(Name = "Medio")]
         Medio,
         [Display(Name = "Dificil")]
         Dificil
