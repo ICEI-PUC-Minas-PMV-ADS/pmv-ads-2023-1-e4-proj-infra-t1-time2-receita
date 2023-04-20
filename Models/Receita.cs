@@ -22,6 +22,10 @@ namespace backend_freecipes.Models
         [Required]
         public Categoria Categoria { get; set; }
 
+        public int UsuarioId { get; set; }
+
+        public Usuario Usuario { get; set; }
+
         public ICollection<Ingrediente> Ingredientes { get; set; }
 
         public ICollection<Etapa> Etapas { get; set; }

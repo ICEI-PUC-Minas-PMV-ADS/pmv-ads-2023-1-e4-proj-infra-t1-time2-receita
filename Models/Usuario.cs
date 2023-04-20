@@ -17,6 +17,10 @@ namespace backend_freecipes.Models
 
         [Required]
         public string Email { get; set; }
+
+        public ICollection<Receita> Receitas { get; set; }
+
+
     }
 
 }
