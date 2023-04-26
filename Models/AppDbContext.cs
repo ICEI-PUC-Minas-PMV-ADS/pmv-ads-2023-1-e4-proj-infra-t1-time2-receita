@@ -9,6 +9,13 @@ namespace backend_freecipes.Models
             
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Receita>()
+                .HasOne(c => c.Usuario).WithMany(c => c.Receitas)
+                .HasForeignKey(c => c.UsuarioId);
+        }
+
         public DbSet<Receita> Receitas { get; set; }
         public DbSet<Etapa> Etapas { get; set; }
         public DbSet<Ingrediente> Ingredientes { get; set; }

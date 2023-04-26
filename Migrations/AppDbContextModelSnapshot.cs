@@ -45,7 +45,7 @@ namespace backend_freecipes.Migrations
 
                     b.HasIndex("ReceitaId");
 
-                    b.ToTable("Etapas");
+                    b.ToTable("Etapas", (string)null);
                 });
 
             modelBuilder.Entity("backend_freecipes.Models.Ingrediente", b =>
@@ -74,7 +74,7 @@ namespace backend_freecipes.Migrations
 
                     b.HasIndex("ReceitaId");
 
-                    b.ToTable("Ingredientes");
+                    b.ToTable("Ingredientes", (string)null);
                 });
 
             modelBuilder.Entity("backend_freecipes.Models.Receita", b =>
@@ -112,7 +112,7 @@ namespace backend_freecipes.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Receitas");
+                    b.ToTable("Receitas", (string)null);
                 });
 
             modelBuilder.Entity("backend_freecipes.Models.Usuario", b =>
@@ -137,7 +137,7 @@ namespace backend_freecipes.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("Usuarios", (string)null);
                 });
 
             modelBuilder.Entity("backend_freecipes.Models.Etapa", b =>
