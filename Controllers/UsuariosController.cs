@@ -23,7 +23,6 @@ namespace backend_freecipes.Controllers
         {
             _context = context;
         }
-
         [HttpGet]
         public async Task<ActionResult> GetAll()
         { 
@@ -31,7 +30,6 @@ namespace backend_freecipes.Controllers
 
             return Ok(model);
         }
-
         [HttpPost]
         public async Task<ActionResult>Create(UsuarioDto model)
         {
@@ -47,7 +45,6 @@ namespace backend_freecipes.Controllers
 
             return CreatedAtAction("GetById", new {id = novo.Id}, novo);
         }
-
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
@@ -61,9 +58,6 @@ namespace backend_freecipes.Controllers
             GerarLinks(model);
             return Ok(model);
         }
-
-
-
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, UsuarioDto model)
         {
@@ -83,7 +77,6 @@ namespace backend_freecipes.Controllers
 
             return NoContent();
         }
-
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
@@ -96,7 +89,6 @@ namespace backend_freecipes.Controllers
 
             return NoContent();
         }
-
         private void GerarLinks(Usuario model)
         {
             model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel:"self", metodo: "GET"));
