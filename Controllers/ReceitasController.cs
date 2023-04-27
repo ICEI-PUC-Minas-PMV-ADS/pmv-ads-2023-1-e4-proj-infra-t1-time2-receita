@@ -1,10 +1,12 @@
 ﻿using backend_freecipes.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend_freecipes.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ReceitasController : ControllerBase
@@ -31,7 +33,8 @@ namespace backend_freecipes.Controllers
             _context.Receitas.Add(model);
             await _context.SaveChangesAsync();
 
-            return Ok(model);
+            //return Ok(model);
+            return CreatedAtAction("GetById", new { id = model.Id }, model);
         }
     }
 
