@@ -8,11 +8,11 @@ namespace backend_freecipes.Controllers
     //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class EtapasController : ControllerBase
+    public class IngredientesController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public EtapasController(AppDbContext context)
+        public IngredientesController(AppDbContext context)
         {
             _context = context;
         }
@@ -20,14 +20,14 @@ namespace backend_freecipes.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
-            var model = await _context.Etapas.ToListAsync();
+            var model = await _context.Ingredientes.ToListAsync();
             return Ok(model);
         }
         [HttpPost]
-        public async Task<ActionResult> Create(Etapa model)
+        public async Task<ActionResult> Create(Ingrediente model)
         {
 
-            _context.Etapas.Add(model);
+            _context.Ingredientes.Add(model);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetById", new { id = model.Id }, model);
@@ -36,7 +36,7 @@ namespace backend_freecipes.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
-            var model = await _context.Etapas
+            var model = await _context.Ingredientes
                 .Include(t => t.Receitas)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
@@ -45,14 +45,14 @@ namespace backend_freecipes.Controllers
             return Ok(model);
         }
         [HttpPut("{id}")]
-        public async Task<ActionResult> Update(int id, Etapa model)
+        public async Task<ActionResult> Update(int id, Ingrediente model)
         {
             if (id != model.Id) return BadRequest();
 
-            var modeloDb = await _context.Etapas.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+            var modeloDb = await _context.Ingredientes.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
 
             if (modeloDb == null) return NotFound();
-            _context.Etapas.Update(model);
+            _context.Ingredientes.Update(model);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -60,11 +60,11 @@ namespace backend_freecipes.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var model = await _context.Etapas.FindAsync(id);
+            var model = await _context.Ingredientes.FindAsync(id);
 
             if (model == null) return NotFound();
 
-            _context.Etapas.Remove(model);
+            _context.Ingredientes.Remove(model);
 
             await _context.SaveChangesAsync();
 

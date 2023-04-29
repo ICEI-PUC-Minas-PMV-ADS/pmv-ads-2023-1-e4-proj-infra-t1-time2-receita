@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backend_freecipes.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ReceitasController : ControllerBase
@@ -38,6 +38,7 @@ namespace backend_freecipes.Controllers
         {
             var model = await _context.Receitas
                 .Include(t => t.Usuario)
+                .Include(t => t.Ingredientes).ThenInclude(t => t.Ingrediente)
                 .Include(t => t.Etapas).ThenInclude(t => t.Etapa)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
@@ -94,7 +95,29 @@ namespace backend_freecipes.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+        [HttpPost("{id}/ingredientes")]
+        public async Task<ActionResult> AddIngrediente(int id, ReceitaIngredientes model)
+        {
+            if (id != model.ReceitaId) return BadRequest();
+            _context.ReceitasIngredientes.Add(model);
+            await _context.SaveChangesAsync();
 
+            return CreatedAtAction("GetById", new { id = model.ReceitaId }, model);
+        }
+        [HttpDelete("{id}/ingredientes/{ingredienteId}")]
+        public async Task<ActionResult> DeleteIngrediente(int id, int ingredienteId)
+        {
+            var model = await _context.ReceitasIngredientes
+                .Where(c => c.ReceitaId == id && c.IngredienteId == ingredienteId)
+                .FirstOrDefaultAsync();
+
+            if (model == null) return NotFound();
+
+            _context.ReceitasIngredientes.Remove(model);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

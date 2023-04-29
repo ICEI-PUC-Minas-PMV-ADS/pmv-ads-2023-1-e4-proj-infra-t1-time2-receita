@@ -12,7 +12,7 @@ using System.Text;
 namespace backend_freecipes.Controllers
 {
 
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase

@@ -26,7 +26,7 @@ namespace backend_freecipes.Models
 
         public Usuario Usuario { get; set; }
 
-        public ICollection<Ingrediente> Ingredientes { get; set; }
+        public ICollection<ReceitaIngredientes> Ingredientes { get; set; }
 
         public ICollection<ReceitaEtapas> Etapas { get; set; }
     }
