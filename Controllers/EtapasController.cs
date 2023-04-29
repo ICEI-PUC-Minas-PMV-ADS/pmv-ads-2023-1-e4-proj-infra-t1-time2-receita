@@ -1,4 +1,4 @@
-using backend_freecipes.Models;
+﻿using backend_freecipes.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,11 +8,11 @@ namespace mf_apis_web_services_fuel_manager.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class ReceitasController : ControllerBase
+    public class EtapasController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public ReceitasController(AppDbContext context)
+        public EtapasController(AppDbContext context)
         {
             _context = context;
         }
@@ -20,14 +20,14 @@ namespace mf_apis_web_services_fuel_manager.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
-            var model = await _context.Receitas.ToListAsync();
+            var model = await _context.Etapas.ToListAsync();
             return Ok(model);
         }
         [HttpPost]
-        public async Task<ActionResult> Create(Receita model)
+        public async Task<ActionResult> Create(Etapa model)
         {
-           
-            _context.Receitas.Add(model);
+
+            _context.Etapas.Add(model);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetById", new { id = model.Id }, model);
@@ -36,10 +36,8 @@ namespace mf_apis_web_services_fuel_manager.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
-            var model = await _context.Receitas
-                .Include(t => t.Usuario)
-                .Include(t => t.Etapas)
-
+            var model = await _context.Etapas
+                .Include(t => t.Receita)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (model == null) return NotFound();
@@ -47,15 +45,14 @@ namespace mf_apis_web_services_fuel_manager.Controllers
             return Ok(model);
         }
         [HttpPut("{id}")]
-        public async Task<ActionResult> Update(int id, Receita model)
+        public async Task<ActionResult> Update(int id, Etapa model)
         {
             if (id != model.Id) return BadRequest();
 
-            var modeloDb = await _context.Receitas.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+            var modeloDb = await _context.Etapas.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
 
             if (modeloDb == null) return NotFound();
-
-            _context.Receitas.Update(model);
+            _context.Etapas.Update(model);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -63,11 +60,12 @@ namespace mf_apis_web_services_fuel_manager.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var model = await _context.Receitas.FindAsync(id);
+            var model = await _context.Etapas.FindAsync(id);
 
             if (model == null) return NotFound();
 
-            _context.Receitas.Remove(model);
+            _context.Etapas.Remove(model);
+
             await _context.SaveChangesAsync();
 
             return NoContent();
