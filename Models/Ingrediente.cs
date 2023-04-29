@@ -15,10 +15,7 @@ namespace backend_freecipes.Models
         public string UnidadeMedida { get; set; }
         [Required]
         public int Quantidade { get; set; }
-        [Required]
-        public int ReceitaId { get; set; }
-
-        public Receita Receita { get; set; }
+        public ICollection<ReceitaIngredientes> Receitas { get; set; }
 
     }
 }
