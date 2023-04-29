@@ -37,7 +37,7 @@ namespace backend_freecipes.Controllers
         public async Task<ActionResult> GetById(int id)
         {
             var model = await _context.Etapas
-                .Include(t => t.Receita)
+                .Include(t => t.Receitas)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (model == null) return NotFound();

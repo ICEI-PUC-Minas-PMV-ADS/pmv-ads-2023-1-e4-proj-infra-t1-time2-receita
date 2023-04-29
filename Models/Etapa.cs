@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace backend_freecipes.Models
 {
@@ -8,14 +9,13 @@ namespace backend_freecipes.Models
         public int Id { get; set; }
 
         public int NumInstrucao { get; set; }
-
+        [Required]
         public string Descricao { get; set; }
 
         public int Quantidade { get; set; }
 
-        public int ReceitaId { get; set; }
+        public ICollection<ReceitaEtapas> Receitas { get; set; }
 
-        public Receita Receita { get; set; }
 
     }
 }
