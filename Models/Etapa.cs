@@ -13,9 +13,8 @@ namespace backend_freecipes.Models
 
         public int Quantidade { get; set; }
 
-        public int ReceitaId { get; set; }
+        public ICollection<ReceitaEtapas> Receitas { get; set; }
 
-        public Receita Receita { get; set; }
 
     }
 }

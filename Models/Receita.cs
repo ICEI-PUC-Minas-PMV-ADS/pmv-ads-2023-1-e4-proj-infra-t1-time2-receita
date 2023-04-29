@@ -28,7 +28,7 @@ namespace backend_freecipes.Models
 
         public ICollection<Ingrediente> Ingredientes { get; set; }
 
-        public ICollection<Etapa> Etapas { get; set; }
+        public ICollection<ReceitaEtapas> Etapas { get; set; }
     }
 
     public enum GrauDificuldade

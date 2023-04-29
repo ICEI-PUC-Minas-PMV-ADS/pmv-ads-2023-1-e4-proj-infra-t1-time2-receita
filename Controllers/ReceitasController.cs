@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace mf_apis_web_services_fuel_manager.Controllers
+namespace backend_freecipes.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]
@@ -38,8 +38,7 @@ namespace mf_apis_web_services_fuel_manager.Controllers
         {
             var model = await _context.Receitas
                 .Include(t => t.Usuario)
-                .Include(t => t.Etapas)
-
+                .Include(t => t.Etapas).ThenInclude(t => t.Etapa)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (model == null) return NotFound();
@@ -71,6 +70,31 @@ namespace mf_apis_web_services_fuel_manager.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        [HttpPost("{id}/etapas")]
+        public async Task<ActionResult> AddEtapa(int id, ReceitaEtapas model)
+        {
+            if (id != model.ReceitaId) return BadRequest();
+            _context.ReceitasEtapas.Add(model);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetById", new { id = model.ReceitaId }, model);
+        }
+        [HttpDelete("{id}/etapas/{etapaId}")]
+        public async Task<ActionResult> DeleteEtapa(int id, int etapaId)
+        {
+            var model = await _context.ReceitasEtapas
+                .Where(c => c.ReceitaId == id && c.EtapaId == etapaId)
+                .FirstOrDefaultAsync();
+
+            if (model == null) return NotFound();
+
+            _context.ReceitasEtapas.Remove(model);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+
         }
     }
 }

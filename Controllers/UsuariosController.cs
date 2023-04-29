@@ -52,7 +52,6 @@ namespace backend_freecipes.Controllers
                     .Include(t => t.Receitas)
                    .FirstOrDefaultAsync(c => c.Id == id);
 
-            //if (model == null) NotFound();
             if (model == null) return NotFound();
 
             GerarLinks(model);
