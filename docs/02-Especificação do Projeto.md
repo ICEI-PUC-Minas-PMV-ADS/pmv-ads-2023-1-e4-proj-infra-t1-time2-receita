@@ -175,15 +175,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais d
 |RF-01 | Permitir cadastrar um usuário  | MUST | 
 |RF-02 | Efetuar login  | MUST | 
 |RF-03 | Permitir excluir usuário  | MUST |
-|RF-04 | Implementar uma Web API | MUST | 
-|RF-05 | Permitir ao usuário inserir receitas.   | MUST |
-|RF-06 | Permitir ao usuário atualizar as receitas cadastradas  | MUST | 
-|RF-07 | Permitir ao usuário excluir receitas   | MUST |
-|RF-08 | Permitir pesquisar receitas. | SHOULD | 
-|RF-09 | Salvar lista de favoritos.   | COULD |
-|RF-10 | Permitir aos usuarios visualizar todas as receitas da aplicação  |  MUST |
-|RF-11 | Ordenar as receitas por categoria.   | COULD |
-|RF-12 | Permitir ao usuário avaliar outras receitas.    | COULD |
+|RF-04 | Permitir ao usuário inserir receitas.   | MUST |
+|RF-05 | Permitir ao usuário atualizar as receitas cadastradas  | MUST | 
+|RF-06 | Permitir ao usuário excluir receitas   | MUST |
+|RF-07 | Permitir pesquisar receitas. | SHOULD | 
+|RF-08 | Salvar lista de favoritos.   | COULD |
+|RF-09 | Permitir aos usuarios visualizar todas as receitas da aplicação  |  MUST |
+|RF-10 | Ordenar as receitas por categoria.   | COULD |
+|RF-11 | Permitir ao usuário avaliar outras receitas.    | COULD |
 
 ### Requisitos não Funcionais
 
