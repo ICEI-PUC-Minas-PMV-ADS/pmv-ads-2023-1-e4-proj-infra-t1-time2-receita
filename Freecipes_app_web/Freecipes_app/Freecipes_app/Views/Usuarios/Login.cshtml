@@ -1,0 +1,51 @@
+﻿@model Freecipes_app.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container m-0 p-0 mw-100">
+    <div class="row m-0 p-0 mw-100 align-items-center">
+        <div class="col">
+            <br />            
+        </div>
+
+        <div class="col">
+
+            <div style="background-color: #8D99AE; width: 40vw; height: 60vh; border-radius:5px" class="mx-auto">
+                <div style="width: 90%; margin-left: auto; margin-right: auto; padding: 0.1vw">
+                    <h1 class="ml-0 p-1">Faça o login e acesse sua conta</h1>
+                    <form asp-action="Login">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-login p-1 ml-0">
+                            <label asp-for="Email" class="control-label" style="color:white"></label>
+                            <input asp-for="Email" class="form-control" placeholder="Insira seu e-mail" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-login p-1 ml-0">
+                            <label asp-for="Senha" class="control-label" style="color:white">Senha:</label>
+                            <input asp-for="Senha" class="form-control" placeholder="Insira sua senha" />
+                            <span asp-validation-for="Senha" class="text-danger"></span>
+                        </div>
+                        <!--Item adicionado-->
+                        <br />
+                        <div class="form-button-login p-1 ml-0">
+                            <input type="submit" value="Entrar" class="btn btn-primary" style="color: black; font-weight: bold; background-color: #84dcc6; border: none;" />
+                            <a class="btn btn-info" style="background-color: #EDF2F4; color: #EF233C; font-weight: bold; border: none" asp-controller="Home" asp-action="Index">Voltar</a>
+                        </div>
+                    </form>
+
+                    <span style="color: #EF233C; font-size: 15px; font-weight: bold"> @ViewBag.Message </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+            }
