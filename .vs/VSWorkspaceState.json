@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Freecipes_app_web",
+    "\\Freecipes_app_web\\Freecipes_app",
+    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app",
+    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views",
+    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views\\Receitas"
+  ],
+  "SelectedNode": "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views\\Receitas\\Create.cshtml",
+  "PreviewInSolutionExplorer": false
+}
