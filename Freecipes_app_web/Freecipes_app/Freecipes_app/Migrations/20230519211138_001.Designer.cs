@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Freecipes_app.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230519183330_V01")]
-    partial class V01
+    [Migration("20230519211138_001")]
+    partial class _001
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

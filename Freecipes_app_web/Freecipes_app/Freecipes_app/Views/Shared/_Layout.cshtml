@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/Freecipes_app.styles.css" asp-append-version="true" />
 </head>
 <body style="height: 100vh;" class="total">
-    <header style="flex-grow: 0; flex-basis: auto; background-color: #F68B28">
+    <header style="flex-grow: 0; flex-basis: auto; background-color: white">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light " >
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Imagens/Logotipo.png"></a>
@@ -34,18 +34,18 @@
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <li class="nav-item">
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Receitas" asp-action="Create">Publicar receita</a>
+                                    <a class="nav-link text-orange" asp-area="" asp-controller="Receitas" asp-action="Create">Publicar receita</a>
                                 </li>
                                 <li class="nav-item">
                                         <!--Item adicionado-->
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="RelatoriosUser">Receitas</a>
+                                    <a class="nav-link text-orange" asp-area="" asp-controller="Usuarios" asp-action="RelatoriosUser">Receitas</a>
                                 </li>
                                 <li class="nav-item">
                                         <!--Item adicionado-->
-                                        <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="EditProfile">Minha Área</a>
-                                    </li>
+                                    <a class="nav-link text-orange" asp-area="" asp-controller="Usuarios" asp-action="Edit">Minha Área</a>
+                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                                    <a class="nav-link text-orange" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Olá, @User.Identity.Name</a>
@@ -54,14 +54,14 @@
                             else
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Quem Somos</a>
+                                    <a class="nav-link text-orange" asp-area="" asp-controller="Home" asp-action="Privacy">Quem Somos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
+                                    <a class="nav-link text-orange" asp-area="" asp-controller="Usuarios" asp-action="Login">Login</a>
                                 </li>
                                 <li class="nav-item">
                                     <!--Item adicionado-->
-                                    <a class="nav-link text-white" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
+                                    <a class="nav-link text-orange" asp-area="" asp-controller="Usuarios" asp-action="Create">Cadastrar</a>
                                 </li>
                             }
                         </ul>
@@ -80,23 +80,16 @@
         <div class="container" style="padding-top: 2.0vw">
             <div class="row">
 
-                <div class="col-sm" style="padding-bottom: 1.5vw;">
+                <div class="col-sm" style="padding-bottom: 0.5vw;">
                     <div style="padding-bottom: 1.2vw;"><a asp-area="" asp-controller="Home" asp-action="Privacy" style="color: white;">Saiba mais sobre a Freecipes</a></div>
                     <div style="padding-bottom: 0.6vw; font-weight: bold; color: white;">Telefone</div>
                     <div style="padding-bottom: 0.6vw; color: white;">(31) 0000-0000</div>
                 </div>
 
-                <div class="col-sm" style="padding-bottom: 1.5vw;">
-                    <div style="padding-bottom: 0.6vw; color: white; font-weight: bold"> Localização </div>
-                    <div style="padding-bottom: 0.6vw; color: white;"> Rua Um, 2, Horto - Belo Horizonte - MG </div>
-                    <div style="padding-bottom: 0.6vw; color: white;"> Cep: 30000-000 </div>
-                </div>
-
-                <div class="col-sm" style="padding-bottom: 1.5vw;">
-                    <div style="padding-bottom: 1.2vw; color: white; font-weight: bold"> Nos siga nas redes sociais </div>
-                    <a href="https://www.facebook.com/Click-Express-109802545105769"><i class="bi bi-facebook" style="color: #3b5998; font-size: 3.0vw"></i></a>
-                    <a href="https://www.instagram.com/aclickexpresstransportes/"><i class="bi bi-instagram" style="color: #ff1981; font-size: 3.0vw; padding: 10px"></i></a>
-                    <a href="https://twitter.com/ClickExpress6"><i class="bi bi-twitter" style="color: #00acee; font-size: 3.0vw"></i></a>
+                <div class="col-sm" style="padding-bottom: 0.5vw;">
+                    <div style="padding-bottom: 0.6vw; color:white; font-weight: bold"> Localização </div>
+                    <div style="padding-bottom: 0.6vw; color: white;"> Rua Geraldo Veloso, 640, Carlos Prates - Belo Horizonte - MG </div>
+                    <div style="padding-bottom: 0.6vw; color: white;"> Cep: 30710-602 </div>
                 </div>
 
             </div>
