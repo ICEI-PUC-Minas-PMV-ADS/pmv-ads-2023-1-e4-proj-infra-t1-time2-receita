@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -33,6 +34,7 @@ namespace Freecipes_app.Migrations
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Tempo = table.Column<int>(type: "int", nullable: false),
                     Rendimento = table.Column<int>(type: "int", nullable: false),
+                    Dt_receita = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Dificuldade = table.Column<int>(type: "int", nullable: false),
                     Categoria = table.Column<int>(type: "int", nullable: false),
                     UsuarioId = table.Column<int>(type: "int", nullable: false)

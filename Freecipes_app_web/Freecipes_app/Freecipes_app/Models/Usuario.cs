@@ -14,7 +14,7 @@ namespace Freecipes_app.Models
         [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Nome { get; set; }
 
-        [Display(Name = "Cadastre uma senha:")]
+        [Display(Name = "Senha:")]
         [Required(ErrorMessage = "*Campo Obrigatório")]
         [DataType(DataType.Password)] //inserir criptografia na caixa de senha (****)
         public string Senha { get; set; }

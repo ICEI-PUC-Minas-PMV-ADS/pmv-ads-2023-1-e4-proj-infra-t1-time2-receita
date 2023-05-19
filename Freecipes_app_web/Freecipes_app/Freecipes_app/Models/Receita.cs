@@ -18,6 +18,8 @@ namespace Freecipes_app.Models
         [Required]
         public int Rendimento { get; set; }
         [Required]
+        public DateTime Dt_receita { get; set; }
+        [Required]
         public GrauDificuldade Dificuldade { get; set; }
         [Required]
         public Categoria Categoria { get; set; }

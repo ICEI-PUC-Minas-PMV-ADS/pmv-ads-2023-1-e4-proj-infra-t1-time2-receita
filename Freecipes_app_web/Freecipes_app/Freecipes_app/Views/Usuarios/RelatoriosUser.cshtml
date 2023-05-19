@@ -1,0 +1,73 @@
+﻿@model Freecipes_app.Models.Usuario
+
+@{
+    ViewData["Title"] = "RelatoriosUser";
+}
+
+
+
+<div style="padding: 0px 25px 0px 25px">
+    <div class="container m-0 p-0 mw-100" style="font-size: 1.0vw; ">
+        <div>
+            <br />
+            <h4 class="table text-white">Minhas receitas</h4>
+            <br /><br />
+            <div class="table-responsive">
+                <table class="table text-white">
+                    <thead>
+                        <tr>
+                            <th style="vertical-align: middle; text-align: center">
+                                Nome
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Descricao
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Tempo
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Rendimento
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Grau de Dificuldade
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                Categoria
+                            </th>
+                            <th style="vertical-align: middle; text-align: center">
+                                + Info
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Receitas)
+                        {
+
+                                <tr>
+                                    <td style="vertical-align: middle; text-align: center">
+                                        @Html.DisplayFor(modelItem => item.Nome)
+                                    </td>
+                                    <td style="vertical-align: middle; text-align: center">
+                                        @Html.DisplayFor(modelItem => item.Descricao)
+                                    </td>
+                                    <td style="vertical-align: middle; text-align: center">
+                                        @Html.DisplayFor(modelItem => item.Tempo)
+                                    </td>
+                                    <td style="vertical-align: middle; text-align: center">
+                                        @Html.DisplayFor(modelItem => item.Rendimento)
+                                    </td>
+                                    <td style="vertical-align: middle; text-align: center">
+                                        @Html.DisplayFor(modelItem => item.Dificuldade)
+                                    </td>
+                                    <td style="vertical-align: middle; text-align: center">
+                                        @Html.DisplayFor(modelItem => item.Categoria)
+                                    </td>
+                                </tr>
+                            }
+                    </tbody>
+                </table>
+            </div>
+            <br /><br />
+        </div>
+    </div>
+</div>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Freecipes_app.Models;
+using System.Security.Claims;
 
 namespace Freecipes_app.Controllers
 {
@@ -56,10 +57,13 @@ namespace Freecipes_app.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,Tempo,Rendimento,Dificuldade,Categoria,UsuarioId")] Receita receita)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,Tempo,Rendimento,Dificuldade,Categoria")] Receita receita)
         {
             if (ModelState.IsValid)
             {
+                var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                receita.UsuarioId = Convert.ToInt32(userId);
+                receita.Dt_receita = DateTime.Now;
                 _context.Add(receita);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

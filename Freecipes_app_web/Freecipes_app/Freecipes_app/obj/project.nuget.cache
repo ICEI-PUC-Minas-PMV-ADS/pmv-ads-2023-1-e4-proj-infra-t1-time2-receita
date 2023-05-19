@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hMI6oF/cOvexePyo0pktBocZcsVTIxlCa71+WCdsIADTFMlcDigB9I7GUXv5S1bdBQRM2JHOklbCjeqMj1wvAA==",
+  "dgSpecHash": "6ntvo0PeyVo31MMKEWOKl9WMGS5Fn36uzW2YNLuTIEiWcg3IJMNfMSsERLIHbRcHxYEFzAgFYaDy2PYfPOtvtA==",
   "success": true,
-  "projectFilePath": "D:\\werlon\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Freecipes_app.csproj",
+  "projectFilePath": "D:\\werlon\\pmv-ads-2023-1-e4-proj-infra-t1-time2-receita\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Freecipes_app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\werlon\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\werlon\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
