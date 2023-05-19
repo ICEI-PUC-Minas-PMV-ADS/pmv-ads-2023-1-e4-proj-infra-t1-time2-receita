@@ -99,6 +99,14 @@ namespace Freecipes_app.Migrations
                     b.Property<DateTime>("Dt_receita")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Etapa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ingrediente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -147,7 +155,7 @@ namespace Freecipes_app.Migrations
             modelBuilder.Entity("Freecipes_app.Models.Etapa", b =>
                 {
                     b.HasOne("Freecipes_app.Models.Receita", "Receita")
-                        .WithMany("Etapas")
+                        .WithMany()
                         .HasForeignKey("ReceitaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -158,7 +166,7 @@ namespace Freecipes_app.Migrations
             modelBuilder.Entity("Freecipes_app.Models.Ingrediente", b =>
                 {
                     b.HasOne("Freecipes_app.Models.Receita", "Receita")
-                        .WithMany("Ingredientes")
+                        .WithMany()
                         .HasForeignKey("ReceitaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -175,13 +183,6 @@ namespace Freecipes_app.Migrations
                         .IsRequired();
 
                     b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("Freecipes_app.Models.Receita", b =>
-                {
-                    b.Navigation("Etapas");
-
-                    b.Navigation("Ingredientes");
                 });
 
             modelBuilder.Entity("Freecipes_app.Models.Usuario", b =>

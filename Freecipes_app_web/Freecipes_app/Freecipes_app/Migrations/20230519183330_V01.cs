@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Freecipes_app.Migrations
 {
-    public partial class V00 : Migration
+    public partial class V01 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -34,6 +34,8 @@ namespace Freecipes_app.Migrations
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Tempo = table.Column<int>(type: "int", nullable: false),
                     Rendimento = table.Column<int>(type: "int", nullable: false),
+                    Ingrediente = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Etapa = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Dt_receita = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Dificuldade = table.Column<int>(type: "int", nullable: false),
                     Categoria = table.Column<int>(type: "int", nullable: false),

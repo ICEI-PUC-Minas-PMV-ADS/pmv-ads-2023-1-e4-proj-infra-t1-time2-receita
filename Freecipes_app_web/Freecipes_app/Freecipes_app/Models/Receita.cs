@@ -17,6 +17,12 @@ namespace Freecipes_app.Models
         public int Tempo { get; set; }
         [Required]
         public int Rendimento { get; set; }
+        [Display(Name = "Ingredientes")]
+        [Required]
+        public string Ingrediente { get; set; }
+        [Display(Name = "Modo de preparo")]
+        [Required]
+        public string Etapa { get; set; }
         [Required]
         public DateTime Dt_receita { get; set; }
         [Required]
@@ -28,9 +34,9 @@ namespace Freecipes_app.Models
 
         public Usuario Usuario { get; set; }
 
-        public ICollection<Ingrediente> Ingredientes { get; set; }
+        //public ICollection<Ingrediente> Ingredientes { get; set; }
 
-        public ICollection<Etapa> Etapas { get; set; }
+        //public ICollection<Etapa> Etapas { get; set; }
     }
 
     public enum GrauDificuldade

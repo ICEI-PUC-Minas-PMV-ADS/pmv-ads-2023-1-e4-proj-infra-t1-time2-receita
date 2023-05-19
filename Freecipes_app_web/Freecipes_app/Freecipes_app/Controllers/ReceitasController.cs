@@ -57,7 +57,7 @@ namespace Freecipes_app.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,Tempo,Rendimento,Dificuldade,Categoria")] Receita receita)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,Tempo,Rendimento,Dificuldade,Categoria,Ingrediente,Etapa")] Receita receita)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +66,8 @@ namespace Freecipes_app.Controllers
                 receita.Dt_receita = DateTime.Now;
                 _context.Add(receita);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return RedirectToAction("RelatoriosUser", "Usuarios");
             }
             ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email", receita.UsuarioId);
             return View(receita);
