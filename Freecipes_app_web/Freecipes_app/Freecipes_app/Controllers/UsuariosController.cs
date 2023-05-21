@@ -49,8 +49,25 @@ namespace Freecipes_app.Controllers
             return View();
         }
 
-        // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details()
+        {
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            int id = Convert.ToInt32(userId);
+
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return View(usuario);
+        }
+
+        
+
+    // GET: Usuarios/Details/5
+   /*/ public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Usuarios == null)
             {
@@ -66,6 +83,7 @@ namespace Freecipes_app.Controllers
 
             return View(usuario);
         }
+   /*/
 
         // GET: Usuarios/Create
         public IActionResult Create()
