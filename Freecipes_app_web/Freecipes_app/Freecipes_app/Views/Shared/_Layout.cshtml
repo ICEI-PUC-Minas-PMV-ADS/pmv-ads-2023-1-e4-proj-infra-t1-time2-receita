@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>@ViewData["Title"] - Freecipes_app</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -10,12 +10,12 @@
 </head>
 <body style="height: 100vh;" class="total">
     <header style="flex-grow: 0; flex-basis: auto; background-color: white">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light " >
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Imagens/Logotipo.png"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span> 
                 </button>
                 <div class="container">
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
@@ -25,9 +25,7 @@
                     </button>
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
-
                             <li class="nav-item">
-
                             </li>
                         </ul>
                         <ul class="navbar-nav">
@@ -37,13 +35,13 @@
                                     <a class="nav-link text-orange" asp-area="" asp-controller="Receitas" asp-action="Create">Publicar receita</a>
                                 </li>
                                 <li class="nav-item">
-                                        <!--Item adicionado-->
+                                    <!--Item adicionado-->
                                     <a class="nav-link text-orange" asp-area="" asp-controller="Usuarios" asp-action="RelatoriosUser">Receitas</a>
                                 </li>
                                 <li class="nav-item">
-                                        <!--Item adicionado-->
+                                    <!--Item adicionado-->
                                     <a class="nav-link text-orange" asp-area="" asp-controller="Usuarios" asp-action="Edit">Minha Área</a>
-                                 </li>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-orange" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
                                 </li>
@@ -71,27 +69,23 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="container m-0 p-0 mw-100" style="background-color:lightgrey; flex-grow: 0; flex-basis: auto;">
+        <main role="main" class="container m-0 p-0 mw-100" style=" flex-grow: 0; flex-basis: auto;">
             @RenderBody()
         </main>
     </div>
-
     <footer class="footer text-white position-relative" style="font-size: 100%; padding-bottom: 1.5vw; background-color: #F68B28">
         <div class="container" style="padding-top: 2.0vw">
             <div class="row">
-
                 <div class="col-sm" style="padding-bottom: 0.5vw;">
                     <div style="padding-bottom: 1.2vw;"><a asp-area="" asp-controller="Home" asp-action="Privacy" style="color: white;">Saiba mais sobre a Freecipes</a></div>
                     <div style="padding-bottom: 0.6vw; font-weight: bold; color: white;">Telefone</div>
                     <div style="padding-bottom: 0.6vw; color: white;">(31) 0000-0000</div>
                 </div>
-
                 <div class="col-sm" style="padding-bottom: 0.5vw;">
                     <div style="padding-bottom: 0.6vw; color:white; font-weight: bold"> Localização </div>
                     <div style="padding-bottom: 0.6vw; color: white;"> Rua Geraldo Veloso, 640, Carlos Prates - Belo Horizonte - MG </div>
                     <div style="padding-bottom: 0.6vw; color: white;"> Cep: 30710-602 </div>
                 </div>
-
             </div>
         </div>
     </footer>

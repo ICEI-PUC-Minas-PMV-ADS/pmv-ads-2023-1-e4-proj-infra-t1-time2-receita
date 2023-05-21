@@ -4,52 +4,64 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="container m-0 p-0 mw-100">
-    <div class="row m-0 p-0 mw-100 align-items-center">
-        <div class="col">
-            <br />            
-        </div>
+<link rel="stylesheet" href="~/css/estilos.css" />
 
-        <div class="col">
+<style>
+    .btn-entrar {
+        background-color: #EF233C;
+        color: white;
+    }
 
-            <div style="background-color: white; width: 40vw; height: 60vh; border-radius:5px" class="mx-auto">
-                <div style="width: 90%; margin-left: auto; margin-right: auto; padding: 0.1vw">
-                    <h2 class="ml-0 p-1">Acesse sua conta</h2>
-                    <form asp-action="Login">
+    .btn-esqueceu-senha {
+        color: wheat;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .card {
+        border: none;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-8">
+            <br />
+
+            <div class="card" style="border-radius: 5px;">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Acesse sua conta</h2>
+                    <form asp-action="Login" style="align-content:center; margin-left:5%; margin:20%">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-login p-1 ml-0">
-                            <label asp-for="Email" class="control-label" style="color:black"></label>
-                            <input asp-for="Email" class="form-control" placeholder="Insira seu e-mail" />
+                        <div class="form-group mb-3">
+                            <label asp-for="Email" class="control-label">E-mail:</label>
+                            <input asp-for="Email" class="form-control" style="border-radius:30px;width:25vw" placeholder="Insira seu e-mail" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
-                        <div class="form-login p-1 ml-0">
-                            <label asp-for="Senha" class="control-label" style="color:black">Senha:</label>
-                            <input asp-for="Senha" class="form-control" placeholder="Insira sua senha" />
+                        <div class="form-group mb-3">
+                            <label asp-for="Senha" class="control-label">Senha:</label>
+                            <input asp-for="Senha" class="form-control" style="border-radius:30px; width:25vw" placeholder="Insira sua senha" />
                             <span asp-validation-for="Senha" class="text-danger"></span>
                         </div>
-                        <!--Item adicionado-->
-                        <br />
-                        <div class="form-button-login p-1 ml-0">
-                            <input type="submit" value="Entrar" class="btn btn-danger"/>
-                            <a class="btn btn-light" asp-controller="Home" asp-action="Index">Voltar</a>
+                        <div class="form-group text-center">
+                            <div class="btn-group" role="group">
+                                <input type="submit" value="entrar" class="btn btn-entrar btn-block" style="border-radius:30px; font-size:2vh; font-weight:bold;margin:5px; min-width: 120px" />
+                                <a class="btn btn-outline-secondary btn-block" style="border-radius:30px; font-size:2vh; font-weight:bold; color:white; margin:5px;background-color:wheat; border:none; min-width: 120px" asp-controller="Home" asp-action="Index">voltar</a>
+                            </div>
                         </div>
-
-                        <div>
-                            <a asp-action="Index">Esqueceu a sua senha?</a>
+                        <div class="form-group text-center">
+                            <a asp-action="Index" class="btn-esqueceu-senha">Esqueceu sua senha?</a>
                         </div>
                     </form>
-
-                    <span style="color: #EF233C; font-size: 15px; font-weight: bold"> @ViewBag.Message </span>
+                    <span class="text-center" style="color:red; font-size:2vh; font-weight: bold;">@ViewBag.Message</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-            }
+}

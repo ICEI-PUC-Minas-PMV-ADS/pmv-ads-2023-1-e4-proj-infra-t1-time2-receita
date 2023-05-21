@@ -14,9 +14,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Shared\Class.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_Header.cshtml" />
+    <Content Remove="Views\Shared\_Layout - Cópia.cshtml" />
     <Content Remove="Views\Usuarios\MinhaArea.cshtml" />
     <Content Remove="Views\Usuarios\MinhaArea.razor" />
     <Content Remove="Views\Usuarios\_Layout.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Shared\.editorconfig" />
+    <None Remove="Views\Shared\htmlpage.html" />
+    <None Remove="Views\Shared\htmlpage1.html" />
+    <None Remove="Views\Shared\TextFile.txt" />
+    <None Remove="Views\Shared\_Layout - Cópia.cshtml.css" />
   </ItemGroup>
 
   <ItemGroup>
