@@ -1,53 +1,124 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div>
-    <img src="~/Imagens/Banner.png" class="img-fluid" alt="Responsive image">
-</div>
+<style>
+    .img-hover-effect {
+        transition: opacity 0.3s;
+    }
+
+     .img-hover-effect:hover {
+         opacity: 0.7;
+        }
+
+    .category-link {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
 <br />
 <h3 class="text-center">Destaques</h3>
 <br />
-<div class="container" >
-    <div class="row">
-        <div class="col-sm">
-            <h4>Tilápia assada</h4>
-            <a><img src="~/Imagens/tilapia.png" class="img-fluid"></a>
+<!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="@Url.Action("Index", "Receitas", new { area = "" })">
+                <img src="~/Imagens/peixe-molho.jpg" class="d-block mx-auto img-fluid" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Tilápia</h5>
+                    <p>Receita de peixe ao molho: saiba como fazer</p>
+                </div>
+            </a>
         </div>
-        <div class="col-sm">
-            <h4>Salada de frutas refrescante</h4>
-            <a><img src="~/Imagens/salada-de-frutas.png" class="img-fluid"></a>
+        <div class="carousel-item">
+            <a href="@Url.Action("Index", "Receitas", new { area = "" })">
+                <img src="~/Imagens/salada-de-fruta-no-pote.jpg" class="d-block mx-auto img-fluid" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Salada de Frutas</h5>
+                    <p>Receita de salada de frutas no pote super fácil</p>
+                </div>
+            </a>
         </div>
-        <div class="col-sm">
-            <h4>Sanduiche detox</h4>
-            <a><img src="~/Imagens/sanduiche.png" class="img-fluid"></a>
+        <div class="carousel-item">
+            <a href="@Url.Action("Index", "Receitas", new { area = "" })">
+                <img src="~/Imagens/sanduiche-natural.jpg" class="d-block mx-auto img-fluid" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Sanduíche</h5>
+                    <p>Receita de sanduíche natural simples e saudável</p>
+                </div>
+            </a>
         </div>
-        <div class="col-sm">
-            <h4>Macarrão com salada</h4>
-            <a><img src="~/Imagens/macarrao.png" class="img-fluid"></a>
+        <div class="carousel-item">
+            <a href="@Url.Action("Index", "Receitas", new { area = "" })">
+                <img src="~/Imagens/macarrao-verduras.jpg" class="d-block mx-auto img-fluid" alt="Slide 4">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Macarrão com Legumes</h5>
+                    <p>Receita de macarrão com legumes</p>
+                </div>
+            </a>
         </div>
     </div>
-    <br />
-    <hr />
-    <br />
-    <h3 class="text-center">Categoria</h3>
-    <br />
-    <div class="row">
-        <div class="col-sm">
-            <h4>Café da manhã</h4>
-            <a><img src="~/Imagens/pao-de-queijo.png" class="img-fluid"></a>
-        </div>
-        <div class="col-sm">
-            <h4>Almoço/Jantar</h4>
-            <a><img src="~/Imagens/feijao.png" class="img-fluid"></a>
-        </div>
-        <div class="col-sm">
-            <h4>Sobremesa</h4>
-            <a><img src="~/Imagens/bolo-chocolate.png" class="img-fluid"></a>
-        </div>
-        <div class="col-sm">
-            <h4>Lanche</h4>
-            <a><img src="~/Imagens/misto.png" class="img-fluid"></a>
-        </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
+<!-- Fim do Carousel -->
+<br />
+<hr />
+<br />
+<br />
+<h3 class="text-center">Categoria</h3>
+<br />
+<div class="row justify-content-center">
+    <div class="col-sm">
+        <a href="@Url.Action("Index", "Receitas", new { area = "" })" class="category-link">
+            <h4 class="text-center">Café da manhã</h4>
+            <img src="~/Imagens/cafe-da-manha.jpeg" class="img-hover-effect d-block mx-auto img-fluid rounded" alt="Pão de queijo">
+        </a>
+    </div>
+    <div class="col-sm">
+        <a href="@Url.Action("Index", "Receitas", new { area = "" })" class="category-link">
+            <h4 class="text-center">Almoço/Jantar</h4>
+            <img src="~/Imagens/almoco-de-quarta-feira.jpg" class="img-hover-effect d-block mx-auto img-fluid rounded" alt="Feijão">
+        </a>
+    </div>
+    <div class="col-sm">
+        <a href="@Url.Action("Index", "Receitas", new { area = "" })" class="category-link">
+            <h4 class="text-center">Sobremesa</h4>
+            <img src="~/Imagens/bolo-chocolate.png" class="img-hover-effect d-block mx-auto img-fluid rounded" alt="Bolo de chocolate">
+        </a>
+    </div>
+    <div class="col-sm">
+        <a href="@Url.Action("Index", "Receitas", new { area = "" })" class="category-link">
+            <h4 class="text-center">Lanche</h4>
+            <img src="~/Imagens/lanche-da-tarde.jpg" class="img-hover-effect d-block mx-auto img-fluid rounded" alt="M">
+        </a>
     </div>
 </div>
+<br />
+<br />
+<script>
+    var images = document.querySelectorAll('.img-hover-effect');
+    images.forEach(function (image) {
+        image.addEventListener('mouseover', function () {
+            this.style.opacity = '0.7';
+        });
+
+        image.addEventListener('mouseout', function () {
+            this.style.opacity = '1';
+        });
+    });
+</script>
