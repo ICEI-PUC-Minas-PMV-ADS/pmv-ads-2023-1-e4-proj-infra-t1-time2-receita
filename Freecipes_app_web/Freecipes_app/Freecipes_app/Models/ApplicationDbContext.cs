@@ -10,8 +10,6 @@ namespace Freecipes_app.Models
 
         }
         public DbSet<Receita> Receitas { get; set; }
-        public DbSet<Etapa> Etapas { get; set; }
-        public DbSet<Ingrediente> Ingredientes { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
     }

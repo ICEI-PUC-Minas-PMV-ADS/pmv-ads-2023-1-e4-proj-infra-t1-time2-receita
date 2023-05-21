@@ -34,9 +34,6 @@ namespace Freecipes_app.Models
 
         public Usuario Usuario { get; set; }
 
-        //public ICollection<Ingrediente> Ingredientes { get; set; }
-
-        //public ICollection<Etapa> Etapas { get; set; }
     }
 
     public enum GrauDificuldade
