@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Freecipes_app_web",
-    "\\Freecipes_app_web\\Freecipes_app",
-    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app",
-    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Controllers",
-    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Models"
+    ""
   ],
-  "SelectedNode": "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Models\\Receita.cs",
+  "SelectedNode": "\\C:\\Users\\geova\\Source\\Repos\\pmv-ads-2023-1-e4-proj-infra-t1-time2-receita",
   "PreviewInSolutionExplorer": false
 }
