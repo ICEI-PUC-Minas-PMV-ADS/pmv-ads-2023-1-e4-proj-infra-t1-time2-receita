@@ -4,9 +4,9 @@
     "\\Freecipes_app_web",
     "\\Freecipes_app_web\\Freecipes_app",
     "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app",
-    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views",
-    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views\\Receitas"
+    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Controllers",
+    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Models"
   ],
-  "SelectedNode": "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views\\Receitas\\Create.cshtml",
+  "SelectedNode": "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Models\\Receita.cs",
   "PreviewInSolutionExplorer": false
 }

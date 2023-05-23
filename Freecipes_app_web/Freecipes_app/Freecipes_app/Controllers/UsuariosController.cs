@@ -33,7 +33,7 @@ namespace Freecipes_app.Controllers
 
         public IActionResult EdicaoConcluida()
         {
-            ViewBag.Message = "Alteracao efetuada com sucesso! :)";
+            ViewBag.Message = "Alteração efetuada com sucesso! :)";
             return View();
         }
 

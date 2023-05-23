@@ -23,6 +23,9 @@ namespace Freecipes_app.Models
         [Required(ErrorMessage = "*Campo Obrigatório")]
         public string Email { get; set; }
 
+        [Required]
+        public DateTime DataCadastro { get; set; }
+
         public ICollection<Receita> Receitas { get; set; }
 
 

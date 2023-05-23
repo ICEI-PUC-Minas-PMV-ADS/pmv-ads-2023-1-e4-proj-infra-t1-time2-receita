@@ -9,89 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Freecipes_app
 build_property.RootNamespace = Freecipes_app
-build_property.ProjectDir = C:\Users\geova\Source\Repos\pmv-ads-2023-1-e4-proj-infra-t1-time2-receita\Freecipes_app_web\Freecipes_app\Freecipes_app\
+build_property.ProjectDir = D:\Puc Minas\Eixo 4\pmv-ads-2023-1-e4-proj-infra-t1-time2-receita\Freecipes_app_web\Freecipes_app\Freecipes_app\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\geova\Source\Repos\pmv-ads-2023-1-e4-proj-infra-t1-time2-receita\Freecipes_app_web\Freecipes_app\Freecipes_app
+build_property.MSBuildProjectDirectory = D:\Puc Minas\Eixo 4\pmv-ads-2023-1-e4-proj-infra-t1-time2-receita\Freecipes_app_web\Freecipes_app\Freecipes_app
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Home/Index.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Home/Privacy.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Create.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Delete.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Details.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Edit.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Index.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Receitas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWl0YXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Shared/Error.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/CadastroConcluido.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/CadastroConcluido.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ2FkYXN0cm9Db25jbHVpZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Create.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Delete.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Details.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Edit.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Index.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Login.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/RelatoriosUser.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Usuarios/RelatoriosUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcUmVsYXRvcmlvc1VzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/_ViewImports.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/_ViewStart.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/geova/Source/Repos/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Shared/_Layout.cshtml]
+[D:/Puc Minas/Eixo 4/pmv-ads-2023-1-e4-proj-infra-t1-time2-receita/Freecipes_app_web/Freecipes_app/Freecipes_app/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qej43mfn9v
