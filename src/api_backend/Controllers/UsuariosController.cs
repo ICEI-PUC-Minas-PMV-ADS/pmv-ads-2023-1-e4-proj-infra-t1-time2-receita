@@ -121,8 +121,8 @@ namespace backend_freecipes.Controllers
             var claims = new ClaimsIdentity(new Claim[]
             {
                 new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),
-                new Claim(ClaimTypes.Name, model.Nome),
-                new Claim(ClaimTypes.Email, model.Email),
+                //new Claim(ClaimTypes.Name, model.Nome),
+                //new Claim(ClaimTypes.Email, model.Email),
             });
 
             var tokenDescriptor = new SecurityTokenDescriptor
