@@ -30,6 +30,8 @@ namespace backend_freecipes.Controllers
 
             return Ok(model);
         }
+        
+        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult>Create(UsuarioDto model)
         {
