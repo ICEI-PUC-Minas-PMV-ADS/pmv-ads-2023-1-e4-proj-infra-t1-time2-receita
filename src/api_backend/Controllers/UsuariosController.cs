@@ -60,16 +60,6 @@ namespace backend_freecipes.Controllers
             GerarLinks(model);
             return Ok(model);
         }
-        [AllowAnonymous]
-        [HttpGet("{email}")]
-        public async Task<ActionResult> GetByEmail(string email)
-        {
-            var model = await _context.Usuarios
-                   .FirstOrDefaultAsync(c => c.Email == email);
-
-            if (model == null) return NotFound();
-            return Ok();
-        }
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, UsuarioDto model)
         {
