@@ -32,6 +32,7 @@ namespace backend_freecipes.Controllers
 
             return CreatedAtAction("GetById", new { id = model.Id }, model);
         }
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
