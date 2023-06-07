@@ -31,7 +31,7 @@
             <div class="card" style="border-radius: 5px;">
                 <div class="card-body" >
                     <h2 class="card-title text-center">Acesse sua conta</h2>
-                    <form asp-action="Login" style="align-content:center; margin-left:5%; margin:20%">
+                    <form asp-action="Authenticate" style="align-content:center; margin-left:5%; margin:20%">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="form-group mb-3">
                             <label asp-for="Email" class="control-label">E-mail:</label>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="form-group text-center">
                             <div class="btn-group" role="group">
-                                <input type="submit" value="entrar" class="btn btn-entrar btn-block" style="border-radius:30px; font-size:2vh; font-weight:bold;margin:5px; min-width: 120px" />
+                                <input type="submit" value="entrar"  class="btn btn-entrar btn-block" style="border-radius:30px; font-size:2vh; font-weight:bold;margin:5px; min-width: 120px" />
                                 <a class="btn btn-outline-secondary btn-block" style="border-radius:30px; font-size:2vh; font-weight:bold; color:white; margin:5px;background-color:wheat; border:none; min-width: 120px" asp-controller="Home" asp-action="Index">voltar</a>
                             </div>
                         </div>

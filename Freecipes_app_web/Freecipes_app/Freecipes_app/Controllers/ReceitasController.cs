@@ -1,172 +1,105 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using Freecipes_app.Models;
+using Newtonsoft.Json;
+using System.Text;
+using System.Net.Http.Headers;
 using System.Security.Claims;
 
 namespace Freecipes_app.Controllers
 {
     public class ReceitasController : Controller
     {
-        private readonly ApplicationDbContext _context;
-
-        public ReceitasController(ApplicationDbContext context)
+        private readonly string ENDPOINT = "https://backendfreecipes20230523214235.azurewebsites.net/api/Receitas";
+        private readonly HttpClient httpClient = null;
+  
+        //construtor
+        public ReceitasController()
         {
-            _context = context;
+            httpClient = new HttpClient();
+            httpClient.BaseAddress = new Uri(ENDPOINT);
+        }
+
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
 
         // GET: Receitas
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Receitas.Include(r => r.Usuario);
-            return View(await applicationDbContext.ToListAsync());
+
+            try
+            {
+                List<Receita> receitas = null;
+
+                httpClient.DefaultRequestHeaders.Clear();
+
+                var token = HttpContext.Session.GetString("token");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                //faz a requisição
+                var usuario = HttpContext.Session.GetString("usuario");
+                var response = await httpClient.GetAsync(ENDPOINT + $"/UsuarioId{usuario}");
+                //valida se teve sucesso
+                if (!string.IsNullOrWhiteSpace(token))
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    receitas = JsonConvert.DeserializeObject<List<Receita>>(content);
+                    var listaReceitas = receitas.ToList();
+                }
+                else
+                {
+                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
+                }
+
+                return View(receitas);
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw;
+            }
         }
 
-        // GET: Receitas/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Receitas == null)
-            {
-                return NotFound();
-            }
-
-            var receita = await _context.Receitas
-                .Include(r => r.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (receita == null)
-            {
-                return NotFound();
-            }
-
-            return View(receita);
-        }
-
-        // GET: Receitas/Create
+        //POST: Receitas
         public IActionResult Create()
         {
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email");
             return View();
         }
 
-        // POST: Receitas/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Descricao,Tempo,Rendimento,Dificuldade,Categoria,Ingrediente,Etapa")] Receita receita)
+        public async Task<IActionResult> Create( Receita receita)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-                receita.UsuarioId = Convert.ToInt32(userId);
-                receita.Dt_receita = DateTime.Now;
-                _context.Add(receita);
-                await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index));
-                return RedirectToAction("RelatoriosUser", "Usuarios");
+                string json = JsonConvert.SerializeObject(receita);
+
+                byte[] buffer = Encoding.UTF8.GetBytes(json);
+
+                ByteArrayContent byteContent = new ByteArrayContent(buffer);
+                byteContent.Headers.ContentType =
+                    new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                string url = ENDPOINT;
+                HttpResponseMessage response =
+                    await httpClient.PostAsync(url, byteContent);
+
+                if (!response.IsSuccessStatusCode)
+                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
+
+                return RedirectToAction("CadastroConcluido");
             }
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email", receita.UsuarioId);
-            return View(receita);
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        // GET: Receitas/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Receitas == null)
-            {
-                return NotFound();
-            }
 
-            var receita = await _context.Receitas.FindAsync(id);
-            if (receita == null)
-            {
-                return NotFound();
-            }
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email", receita.UsuarioId);
-            return View(receita);
-        }
 
-        // POST: Receitas/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Descricao,Tempo,Rendimento,Dificuldade,Categoria,UsuarioId")] Receita receita)
-        {
-            if (id != receita.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(receita);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ReceitaExists(receita.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email", receita.UsuarioId);
-            return View(receita);
-        }
-
-        // GET: Receitas/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Receitas == null)
-            {
-                return NotFound();
-            }
-
-            var receita = await _context.Receitas
-                .Include(r => r.Usuario)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (receita == null)
-            {
-                return NotFound();
-            }
-
-            return View(receita);
-        }
-
-        // POST: Receitas/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Receitas == null)
-            {
-                return Problem("Entity set 'ApplicationDbContext.Receitas'  is null.");
-            }
-            var receita = await _context.Receitas.FindAsync(id);
-            if (receita != null)
-            {
-                _context.Receitas.Remove(receita);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool ReceitaExists(int id)
-        {
-          return _context.Receitas.Any(e => e.Id == id);
-        }
-    }
+       
+}
 }

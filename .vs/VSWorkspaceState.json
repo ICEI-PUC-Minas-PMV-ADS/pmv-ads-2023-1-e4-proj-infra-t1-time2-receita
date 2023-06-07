@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Freecipes_app_web",
+    "\\Freecipes_app_web\\Freecipes_app",
+    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app",
+    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views",
+    "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views\\Usuarios"
   ],
-  "SelectedNode": "\\C:\\Users\\geova\\Source\\Repos\\pmv-ads-2023-1-e4-proj-infra-t1-time2-receita",
+  "SelectedNode": "\\Freecipes_app_web\\Freecipes_app\\Freecipes_app\\Views\\Usuarios\\CadastroConcluido.cshtml",
   "PreviewInSolutionExplorer": false
 }

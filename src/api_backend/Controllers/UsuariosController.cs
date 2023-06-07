@@ -30,7 +30,7 @@ namespace backend_freecipes.Controllers
 
             return Ok(model);
         }
-        
+
         [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult>Create(UsuarioDto model)
@@ -111,7 +111,7 @@ namespace backend_freecipes.Controllers
 
             var jwt = GenerateJwtToken(usuarioDb);
 
-            return Ok(new { jwtToken = jwt });
+            return Ok(new { jwtToken = jwt ,usuario = usuarioDb.Id});
         }
 
         private string GenerateJwtToken(Usuario model)
@@ -121,8 +121,6 @@ namespace backend_freecipes.Controllers
             var claims = new ClaimsIdentity(new Claim[]
             {
                 new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),
-                //new Claim(ClaimTypes.Name, model.Nome),
-                //new Claim(ClaimTypes.Email, model.Email),
             });
 
             var tokenDescriptor = new SecurityTokenDescriptor

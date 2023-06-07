@@ -2,6 +2,7 @@ using backend_freecipes.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace backend_freecipes.Controllers
 {
@@ -43,6 +44,17 @@ namespace backend_freecipes.Controllers
             if (model == null) return NotFound();
 
             GerarLinks(model);
+            return Ok(model);
+        }
+        [AllowAnonymous]
+        [HttpGet("UsuarioId{id}")]
+        public async Task<ActionResult> GetByUserId(int id)
+        {
+            var model = await _context.Receitas.Where(r => r.UsuarioId == id).ToListAsync();
+
+            if (model == null) return NotFound();
+
+            //GerarLinks(model);
             return Ok(model);
         }
         [HttpPut("{id}")]

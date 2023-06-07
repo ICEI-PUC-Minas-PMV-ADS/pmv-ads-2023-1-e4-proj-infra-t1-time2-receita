@@ -1,23 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using Freecipes_app.Models;
 using Microsoft.AspNetCore.Authentication;
-using System.Security.Claims;
+using Newtonsoft.Json;
+using System.Text;
+
+
 
 namespace Freecipes_app.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly string ENDPOINT = "https://backendfreecipes20230523214235.azurewebsites.net/api/Usuarios";
+        private readonly HttpClient httpClient = null;
+        private readonly string ENDPOINTAuthenticate = "https://backendfreecipes20230523214235.azurewebsites.net/api/Usuarios/authenticate";
 
-        public UsuariosController(ApplicationDbContext context)
+        //construtor
+        public UsuariosController()
         {
-            _context = context;
+            httpClient = new HttpClient();
+            httpClient.BaseAddress = new Uri(ENDPOINT);
         }
 
         public IActionResult AccessDenied()
@@ -38,163 +39,131 @@ namespace Freecipes_app.Controllers
         }
 
 
+
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Usuarios.ToListAsync());
+            try
+            {
+                List<Usuario> usuarios = null;
+
+                //faz a requisição
+                var response = await httpClient.GetAsync(ENDPOINT);
+                //valida se teve sucesso
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    usuarios = JsonConvert.DeserializeObject<List<Usuario>>(content);
+                }
+                else
+                {
+                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
+                }
+
+                return View(usuarios);
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw;
+            }
         }
+
+        //POST: Usuarios
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("Nome, Senha, Email")] Usuario usuario)
+        {
+            try
+            {
+                string json = JsonConvert.SerializeObject(usuario);
+
+                byte[] buffer = Encoding.UTF8.GetBytes(json);
+
+                ByteArrayContent byteContent = new ByteArrayContent(buffer);
+                byteContent.Headers.ContentType =
+                    new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                string url = ENDPOINT;
+                HttpResponseMessage response =
+                    await httpClient.PostAsync(url, byteContent);
+
+                if (!response.IsSuccessStatusCode)
+                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
+
+                return RedirectToAction("CadastroConcluido");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
 
         public IActionResult Login()
         {
             return View();
         }
 
-        public async Task<IActionResult> Details()
-        {
-            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-            int id = Convert.ToInt32(userId);
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(usuario);
-        }
-
-        
-
-    // GET: Usuarios/Details/5
-   /*/ public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Usuarios == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(usuario);
-        }
-   /*/
-
-        // GET: Usuarios/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Usuarios/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // Login: Usuarios 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Senha,Email")] Usuario usuario)
+        public async Task<IActionResult> Authenticate([Bind("Email,Senha")] Authenticate usuario)
         {
-            if (_context.Usuarios.Any(c => c.Email == usuario.Email))
+            try
             {
-                ModelState.AddModelError("Email", $"Esse Email já está registrado.");
-            }
+  
+                string json = JsonConvert.SerializeObject(usuario);
 
-            if (ModelState.IsValid)
-            {
-                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(CadastroConcluido));
-            }
-            return View(usuario);
-        }
+                byte[] buffer = Encoding.UTF8.GetBytes(json);
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditProfile([Bind("Id,Nome,Senha,Email")] Usuario usuario)
-        {
-            if (ModelState.IsValid)
-            {
-                try
+                ByteArrayContent byteContent = new ByteArrayContent(buffer);
+
+                byteContent.Headers.ContentType =
+                    new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+
+                string url = ENDPOINTAuthenticate;
+                HttpResponseMessage response =
+                    await httpClient.PostAsync(url, byteContent);
+
+                if (response.IsSuccessStatusCode)
                 {
-                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-                    var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-                    usuario.Id = Convert.ToInt32(userId);
- 
-                    _context.Update(usuario);
+                    var tokenJson = await response.Content.ReadAsStringAsync();
+                    var token = JsonConvert.DeserializeObject<AuthenticateResponse>(tokenJson).jwtToken.ToString();
+                    var usuarioId = JsonConvert.DeserializeObject<AuthenticateResponse>(tokenJson).usuario.ToString();
 
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UsuarioExists(usuario.Id))
+                    if (token != null)
                     {
-                        return NotFound();
+                        HttpContext.Session.SetString("token", token);
+                        HttpContext.Session.SetString("usuario", usuarioId);
                     }
-                    else
-                    {
-                        throw;
-                    }
+
+                    return RedirectToAction("Index","Receitas");
+
                 }
-
-                return RedirectToAction(nameof(EdicaoConcluida));
+                else
+                {
+                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
+                }
+             return View();
             }
 
-            return View(usuario);
+           
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        // Login: Usuarios - item adicionado
-        [HttpPost]
-        public async Task<IActionResult> Login([Bind("Email,Senha")] Usuario usuario)
-        {
-            //faz consulta no banco de dados dos dados inseridos
-            var user = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Email == usuario.Email);
-
-            //condição usuário inxistente
-            if (user == null)
-            {
-                ViewBag.Message = "Usuário e/ou Senha inválidos!";
-                return View();
-            }
-
-            //comparação da senha preenchida com a armazenada no banco de dados
-            bool isSenhaOk = BCrypt.Net.BCrypt.Verify(usuario.Senha, user.Senha);
-
-            //condição usuário existente
-            if (isSenhaOk)
-            {
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, user.Nome),
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    //new Claim(ClaimTypes.Role, user.Perfil.ToString())
-                };
-
-                var userIdentity = new ClaimsIdentity(claims, "login");
-
-                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
-
-                var props = new AuthenticationProperties
-                {
-                    AllowRefresh = true,
-                    ExpiresUtc = DateTime.Now.ToLocalTime().AddDays(7), //mantém login por 7 dias
-                    IsPersistent = true
-                };
-
-                await HttpContext.SignInAsync(principal, props);
-
-                return Redirect("/"); //redicionamento do usuário, após auteticação, para página Home
-
-            }
-
-            ViewBag.Message = "Usuário e/ou Senha inválidos!";
-            return View();
-        }
 
         public async Task<IActionResult> Logout()
         {
@@ -202,119 +171,7 @@ namespace Freecipes_app.Controllers
             return RedirectToAction("Login", "Usuarios");
         }
 
-        // Login: Usuarios - item adicionado
-        public IActionResult MinhaArea()
-        {
-            return View();
-        }
 
-        public async Task<IActionResult> RelatoriosUser()
-        {
-            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
-            int id = Convert.ToInt32(userId);
 
-            var usuario = await _context.Usuarios
-                .Include(t => t.Receitas)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(usuario);
-        }
-
-        // GET: Usuarios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Usuarios == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-            return View(usuario);
-        }
-
-        // POST: Usuarios/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Senha,Email")] Usuario usuario)
-        {
-            if (id != usuario.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(usuario);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UsuarioExists(usuario.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(usuario);
-        }
-
-        // GET: Usuarios/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Usuarios == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(usuario);
-        }
-
-        // POST: Usuarios/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Usuarios == null)
-            {
-                return Problem("Entity set 'ApplicationDbContext.Usuarios'  is null.");
-            }
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario != null)
-            {
-                _context.Usuarios.Remove(usuario);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool UsuarioExists(int id)
-        {
-          return _context.Usuarios.Any(e => e.Id == id);
-        }
     }
 }
