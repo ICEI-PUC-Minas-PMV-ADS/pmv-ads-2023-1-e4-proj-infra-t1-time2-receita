@@ -61,6 +61,156 @@ namespace Freecipes_app.Controllers
                 throw;
             }
         }
+        
+        // GET: Receitas
+        public async Task<IActionResult> GetTodas()
+        {
+
+            try
+            {
+                List<Receita> receitas = null;
+
+                httpClient.DefaultRequestHeaders.Clear();
+
+                var token = HttpContext.Session.GetString("token");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                //faz a requisição
+                var usuario = HttpContext.Session.GetString("usuario");
+                var response = await httpClient.GetAsync(ENDPOINT);
+                //valida se teve sucesso
+                if (!string.IsNullOrWhiteSpace(token))
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    receitas = JsonConvert.DeserializeObject<List<Receita>>(content);
+                    var listaReceitas = receitas.ToList();
+                }
+                else
+                {
+                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
+                }
+
+                return View(receitas);
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw;
+            }
+        }
+
+        // GET: Receitas
+        public async Task<IActionResult> GetCafeManha()
+        {
+
+            try
+            {
+                List<Receita> receitas = null;
+
+                httpClient.DefaultRequestHeaders.Clear();
+
+                //faz a requisição
+                var usuario = HttpContext.Session.GetString("usuario");
+                var response = await httpClient.GetAsync(ENDPOINT);
+
+                string content = await response.Content.ReadAsStringAsync();
+                    receitas = JsonConvert.DeserializeObject<List<Receita>>(content);
+                    var listaReceitas = receitas.ToList();
+
+                return View(receitas);
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw;
+            }
+        }
+
+        // GET: Receitas
+        public async Task<IActionResult> GetAlmocoJantar()
+        {
+
+            try
+            {
+                List<Receita> receitas = null;
+
+                httpClient.DefaultRequestHeaders.Clear();
+
+                //faz a requisição
+                var usuario = HttpContext.Session.GetString("usuario");
+                var response = await httpClient.GetAsync(ENDPOINT);
+
+                string content = await response.Content.ReadAsStringAsync();
+                receitas = JsonConvert.DeserializeObject<List<Receita>>(content);
+                var listaReceitas = receitas.ToList();
+
+                return View(receitas);
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw;
+            }
+        }
+
+        // GET: Receitas
+        public async Task<IActionResult> GetSobremesa()
+        {
+
+            try
+            {
+                List<Receita> receitas = null;
+
+                httpClient.DefaultRequestHeaders.Clear();
+
+                //faz a requisição
+                var usuario = HttpContext.Session.GetString("usuario");
+                var response = await httpClient.GetAsync(ENDPOINT);
+
+                string content = await response.Content.ReadAsStringAsync();
+                receitas = JsonConvert.DeserializeObject<List<Receita>>(content);
+                var listaReceitas = receitas.ToList();
+
+                return View(receitas);
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw;
+            }
+        }
+
+        // GET: Receitas
+        public async Task<IActionResult> GetLanche()
+        {
+
+            try
+            {
+                List<Receita> receitas = null;
+
+                httpClient.DefaultRequestHeaders.Clear();
+
+                //faz a requisição
+                var usuario = HttpContext.Session.GetString("usuario");
+                var response = await httpClient.GetAsync(ENDPOINT);
+
+                string content = await response.Content.ReadAsStringAsync();
+                receitas = JsonConvert.DeserializeObject<List<Receita>>(content);
+                var listaReceitas = receitas.ToList();
+
+                return View(receitas);
+
+            }
+            catch (Exception ex)
+            {
+                string message = ex.Message;
+                throw;
+            }
+        }
 
         //POST: Receitas
         public IActionResult Create()
