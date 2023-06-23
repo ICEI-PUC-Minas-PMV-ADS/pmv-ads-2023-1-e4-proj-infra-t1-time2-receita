@@ -1,177 +1,74 @@
-using Microsoft.AspNetCore.Mvc;
-using Freecipes_app.Models;
-using Microsoft.AspNetCore.Authentication;
-using Newtonsoft.Json;
-using System.Text;
+@model IEnumerable<Freecipes_app.Models.Receita>
 
-
-
-namespace Freecipes_app.Controllers
-{
-    public class UsuariosController : Controller
-    {
-        private readonly string ENDPOINT = "https://backendfreecipes20230523214235.azurewebsites.net/api/Usuarios";
-        private readonly HttpClient httpClient = null;
-        private readonly string ENDPOINTAuthenticate = "https://backendfreecipes20230523214235.azurewebsites.net/api/Usuarios/authenticate";
-
-        //construtor
-        public UsuariosController()
-        {
-            httpClient = new HttpClient();
-            httpClient.BaseAddress = new Uri(ENDPOINT);
-        }
-
-        public IActionResult AccessDenied()
-        {
-            return View();
-        }
-
-        public IActionResult CadastroConcluido()
-        {
-            ViewBag.Message = "Cadastro concluido :), seja muito bem vindo! Efetue Login para iniciar a navegação.";
-            return View();
-        }
-
-        public IActionResult EdicaoConcluida()
-        {
-            ViewBag.Message = "Alteração efetuada com sucesso! :)";
-            return View();
-        }
-
-
-
-        // GET: Usuarios
-        public async Task<IActionResult> Index()
-        {
-            try
-            {
-                List<Usuario> usuarios = null;
-
-                //faz a requisição
-                var response = await httpClient.GetAsync(ENDPOINT);
-                //valida se teve sucesso
-                if (response.IsSuccessStatusCode)
-                {
-                    string content = await response.Content.ReadAsStringAsync();
-                    usuarios = JsonConvert.DeserializeObject<List<Usuario>>(content);
-                }
-                else
-                {
-                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
-                }
-
-                return View(usuarios);
-
-            }
-            catch (Exception ex)
-            {
-                string message = ex.Message;
-                throw;
-            }
-        }
-
-        //POST: Usuarios
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-
-        [HttpPost]
-        public async Task<IActionResult> Create([Bind("Nome, Senha, Email")] Usuario usuario)
-        {
-            try
-            {
-                string json = JsonConvert.SerializeObject(usuario);
-
-                byte[] buffer = Encoding.UTF8.GetBytes(json);
-
-                ByteArrayContent byteContent = new ByteArrayContent(buffer);
-                byteContent.Headers.ContentType =
-                    new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-                string url = ENDPOINT;
-                HttpResponseMessage response =
-                    await httpClient.PostAsync(url, byteContent);
-
-                if (!response.IsSuccessStatusCode)
-                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
-
-                return RedirectToAction("CadastroConcluido");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-
-
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        // Login: Usuarios 
-        [HttpPost]
-        public async Task<IActionResult> Authenticate([Bind("Email,Senha")] Authenticate usuario)
-        {
-            try
-            {
-  
-                string json = JsonConvert.SerializeObject(usuario);
-
-                byte[] buffer = Encoding.UTF8.GetBytes(json);
-
-                ByteArrayContent byteContent = new ByteArrayContent(buffer);
-
-                byteContent.Headers.ContentType =
-                    new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-
-                string url = ENDPOINTAuthenticate;
-                HttpResponseMessage response =
-                    await httpClient.PostAsync(url, byteContent);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var tokenJson = await response.Content.ReadAsStringAsync();
-                    var token = JsonConvert.DeserializeObject<AuthenticateResponse>(tokenJson).jwtToken.ToString();
-                    var usuarioId = JsonConvert.DeserializeObject<AuthenticateResponse>(tokenJson).usuario.ToString();
-
-                    if (token != null)
-                    {
-                        HttpContext.Session.SetString("token", token);
-                        HttpContext.Session.SetString("usuario", usuarioId);
-                    }
-
-                    return RedirectToAction("GetTodas","Receitas");
-
-                }
-                else
-                {
-                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
-                }
-             return View();
-            }
-
-           
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync();
-            return RedirectToAction("Login", "Usuarios");
-        }
-
-
-
-    }
+@{
+    ViewData["Title"] = "GetAlmocoJantar";
 }
+<h1>Almoço/Jantar</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tempo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rendimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dificuldade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            @if (item.Categoria == (Categoria)1)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tempo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rendimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dificuldade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categoria)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario.Email)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

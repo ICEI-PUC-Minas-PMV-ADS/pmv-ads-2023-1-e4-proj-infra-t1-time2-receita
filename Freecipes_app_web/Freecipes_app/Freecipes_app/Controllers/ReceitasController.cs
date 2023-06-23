@@ -9,7 +9,7 @@ namespace Freecipes_app.Controllers
 {
     public class ReceitasController : Controller
     {
-        private readonly string ENDPOINT = "https://backendfreecipes20230523214235.azurewebsites.net/api/Receitas";
+        private readonly string ENDPOINT = "https://freecipesbackend.azurewebsites.net/api/Receitas";
         private readonly HttpClient httpClient = null;
   
         //construtor
@@ -220,31 +220,44 @@ namespace Freecipes_app.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Create( Receita receita)
+        public async Task<IActionResult> Create([Bind("Nome, Descricao, Tempo, Rendimento, Ingrediente, Etapa, Dt_receita, Dificuldade, Categoria")] Receita receita)
         {
             try
             {
-                string json = JsonConvert.SerializeObject(receita);
+                httpClient.DefaultRequestHeaders.Clear();
 
-                byte[] buffer = Encoding.UTF8.GetBytes(json);
+                var token = HttpContext.Session.GetString("token");
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                var usuario = HttpContext.Session.GetString("usuario");
 
-                ByteArrayContent byteContent = new ByteArrayContent(buffer);
-                byteContent.Headers.ContentType =
+                if (!string.IsNullOrWhiteSpace(token))
+                {
+                    receita.UsuarioId = int.Parse(usuario);
+                    string json = JsonConvert.SerializeObject(receita);
+
+                    byte[] buffer = Encoding.UTF8.GetBytes(json);
+
+                    ByteArrayContent byteContent = new ByteArrayContent(buffer);
+                    byteContent.Headers.ContentType =
                     new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                string url = ENDPOINT;
-                HttpResponseMessage response =
+                    string url = ENDPOINT;
+                    HttpResponseMessage response =
                     await httpClient.PostAsync(url, byteContent);
 
-                if (!response.IsSuccessStatusCode)
-                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
 
-                return RedirectToAction("CadastroConcluido");
+                }
+                else
+                {
+                    ModelState.AddModelError(null, "Erro ao processar a solicitação");
+                }
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                throw ex;
+                string message = ex.Message;
+                throw;
             }
         }
 

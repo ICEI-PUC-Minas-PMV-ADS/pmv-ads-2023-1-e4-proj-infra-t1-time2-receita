@@ -10,9 +10,10 @@ namespace Freecipes_app.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly string ENDPOINT = "https://backendfreecipes20230523214235.azurewebsites.net/api/Usuarios";
+        private readonly string ENDPOINT = "https://freecipesbackend.azurewebsites.net/api/Usuarios";
         private readonly HttpClient httpClient = null;
-        private readonly string ENDPOINTAuthenticate = "https://backendfreecipes20230523214235.azurewebsites.net/api/Usuarios/authenticate";
+        private readonly string ENDPOINTAuthenticate = "https://freecipesbackend.azurewebsites.net/api/Usuarios/authenticate";
+        
 
         //construtor
         public UsuariosController()
@@ -78,7 +79,7 @@ namespace Freecipes_app.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("Nome, Senha, Email")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Nome, Senha, Email, DataCadastro")] Usuario usuario)
         {
             try
             {
@@ -89,7 +90,6 @@ namespace Freecipes_app.Controllers
                 ByteArrayContent byteContent = new ByteArrayContent(buffer);
                 byteContent.Headers.ContentType =
                     new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
 
                 string url = ENDPOINT;
                 HttpResponseMessage response =
